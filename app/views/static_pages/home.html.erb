@@ -1,2 +1,47 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<!-- Home Section -->
+<section id="home">
+<%= image_tag "img/loader.gif", alt:"loader", id: "cycle-loader" %>
+<div id="fullscreen-slider">
+	<!-- Slider image 1-->
+    <div class="slider-item">
+      <%= image_tag "slide1.jpg", alt: "Lic. Gilberto Tovar Picture Profile" %>
+	</div>
+	<!-- End Slider image 1-->
+	<!-- Slider image 2-->
+	<div class="slider-item">
+      <%= image_tag "slide2.jpg", alt: "Lic. Gilberto Tovar Picture Profile" %>
+	</div>
+	<!-- End Slider image 2-->
+</div>
+<div class="slide-content">
+	<div class="text-center">
+		<div class="header">
+			<div class="heading">
+				Welcome to my site
+			</div>
+			<div class="box-heading">
+				<div class="box-inner">
+					Gilberto Tovar
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Home Section -->
+
+<%= render "static_pages/about" %>
+<%= render "static_pages/portafolio" %>
+<%= render "static_pages/skill" %>
+<%= render "static_pages/freelancer" %>
+<%= render "static_pages/resume" %>
+<%= render "static_pages/clients" %>
+<%= render "static_pages/process" %>
+<%= render "static_pages/contact" %>
+
+
+
+
+
+
+
