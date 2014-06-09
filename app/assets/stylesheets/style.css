@@ -68,7 +68,7 @@ blockquote {
 	top: 50%;
 	left: 50%;
 	margin: -40px 0 0 -40px;
-	background: url("../img/preloader.gif");
+	background: url("img/preloader.gif");
 }
 .section-content{
 padding-bottom:60px;
@@ -387,7 +387,7 @@ line-height: 1.6;
 	width: 100%;
 	margin: 0px auto;
   text-align: center;
-  background: url(../img/overlay.png) repeat left top;
+  background: url(img/overlay.png) repeat left top;
 }
 .header-video .slide-content{
  background: none !important;
@@ -430,14 +430,14 @@ line-height: 1.6;
     padding: 4px 20px;
 }
 .header-video {
-	background: url(	"../img/overlay-video.png");
+	background: url("img/overlay-video.png");
 	position: relative;
 	width: 100%;
 	height: 100%;
 	color: #fff;
 }
 .video-section {
-	background: url('../images/slide1.jpg') no-repeat bottom center;
+	background: url('images/slide1.jpg') no-repeat bottom center;
 }
 #video-volume {
 	bottom: 30px;
@@ -581,7 +581,7 @@ margin:20px 7px 0px 7px;
 }
 /* ##### Work Experience and Education ##### */
 ul.timeline {
-    background: url("../img/timeline-bg.jpg") repeat-y scroll center center rgba(0, 0, 0, 0);
+    background: url("img/timeline-bg.jpg") repeat-y scroll center center rgba(0, 0, 0, 0);
     height: auto;
     margin: 40px auto 0;
     padding: 0 0 80px;
@@ -832,7 +832,7 @@ transform: rotate(180deg);
     width: 8.33333%;
 }
 #left_scroll a {
-    background: url("../img/left-arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("img/left-arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     display: inline-block;
     height: 150px;
     opacity: 0.7;
@@ -850,7 +850,7 @@ transform: rotate(180deg);
     width: 8.33333%;
 }
 #right_scroll a {
-    background: url("../img/right-arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+    background: url("img/right-arrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
     display: inline-block;
     height: 150px;
     opacity: 0.7;
@@ -1260,7 +1260,7 @@ margin-bottom:20px;
 	content: "";
 	width: 16px;
 	height: 26px;
-	background: url(../img/slider_controls.png) 0 bottom no-repeat;
+	background: url(img/slider_controls.png) 0 bottom no-repeat;
 	top: 50%;
 	margin-top: -13px;
 	left: 12px;
