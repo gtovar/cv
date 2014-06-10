@@ -18,12 +18,11 @@ var mapOptions = {
   };
 
   var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
-  
    
   var marker = new google.maps.Marker({
       position: myLatLng,
       map: map,
-      icon: 'img/location-icon.png',
+      icon: 'assets/img/location-icon.png',
 	  title: '',
   });
   
