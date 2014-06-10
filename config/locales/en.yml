@@ -20,4 +20,18 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  email_spam: Do not worry, I not send spam
+  email_description: Drop me a Line, always check my Inbox.
+  about: About
+  me: Me
+  profession_lti: L.T.I.
+  home: Home
+  about_bar: About
+  works: Works
+  skills: Skills
+  resume: Resume
+  clients: Tools
+  process: Process
+  contact: Contact
+
+
