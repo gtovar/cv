@@ -15,28 +15,18 @@
     <div class="col-md-6 col-md-offset-3 text-center contact-block">
       <!-- Contact Details -->
       <i class="fa fa-map-marker fa-3x"></i>
-      <p>
-      12 Segun Bagicha, 10th Floor <br>
-      Dhaka, Bangladesh
-      </p>
-      <p>
-      +1 343-234-4343 <br/>+0 243-243-4243
-      </p>
       <!-- End Contact Details -->
       <!-- Social Icon -->
       <div class="social-icon">
         <a href="#"><i class="fa fa-facebook-square fa-3x"></i></a>
         <a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
-        <a href="#"><i class="fa fa-google-plus-square fa-3x"></i></a>
-        <a href="#"><i class="fa fa-linkedin-square fa-3x"></i></a>
-        <a href="#"><i class="fa fa-pinterest-square fa-3x"></i></a>
-        <a href="#"><i class="fa fa-vimeo-square fa-3x"></i></a>
+        <a href="#"><i class="fa fa-github-square fa-3x"></i></a>
       </div>
       <!-- End Social Icon -->
     </div>
   </div>
   <div class="row item_fade_in">
-    <h4 class="text-center">Drop me a Line</h4>
+    <h4 class="text-center"><%= t :email_description %></h4>
     <div class="col-md-6 col-md-offset-3">
       <div class="form-respond text-center">
       </div>
@@ -45,7 +35,7 @@
           <input type="text" name="name" id="name" class="form-control required" placeholder="Name">
         </div>
         <div class="form-group">
-          <input type="email" name="email" id="email" class="form-control required email" placeholder="Email">
+          <input type="email" name="email" id="email" class="form-control required email" placeholder="Email"><p><%= t :email_spam %></p>
         </div>
         <div class="form-group">
           <textarea name="message" id="message" class="form-control input-lg required" rows="9" placeholder="Enter Message"></textarea>

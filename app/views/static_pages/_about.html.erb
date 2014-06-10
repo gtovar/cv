@@ -7,7 +7,7 @@
 			<div>
 				<span class="fa fa-user fa-2x"></span>
 			</div>
-			<h1>About <span>Me</span></h1>
+            <h1><%= t :about %> <span><%= t :me %></span></h1>
 		</div>
 		<!-- End Section Title -->
 	</div>
@@ -38,45 +38,41 @@
 		<div class="col-md-4 item_bottom">
       <!-- some information list -->
 		  <ul class="fa-ul">
-				<li><i class="fa fa-li fa-calendar"></i><strong>Birthdate</strong> : 02/09/1982</li>
-				<li><i class="fa fa-li fa-mobile"></i><strong>Phone</strong> : +1 343-234-4343</li>
-				<li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : john@example.com</li>
-				<li><i class="fa fa-li fa-globe"></i><strong>Website</strong> : www.example.com</li>
-				<li><i class="fa fa-li fa-home"></i><strong>Adresse</strong> : 12 Segun Bagicha, 10th Floor,<br>Dhaka 1000, Bangladesh.</li>
+            <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
+            <li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : tovarninogilberto@gmail.com</li>
+            <li><i class="fa fa-li fa-globe"></i><strong><%= t :website %></strong> : www.gilbertotovar.com</li>
 			</ul>
 			<!-- ./some information list -->
       <!-- some number facts -->
 			<div class="number-counters text-center new-line">
 				<div class="counters-item">
-					<i class="fa fa-group fa-2x"></i>
+					<i class="fa fa-coffee fa-2x"></i>
 					<strong data-to="150">0</strong>
 					<!-- Set Your Number here. i,e. data-to="56" -->
 					<p>
-						Happy Clients
+                    <%= t :coffe %>
 					</p>
 				</div>
 				<div class="counters-item">
 					<i class="fa fa-flag fa-2x"></i>
-					<strong data-to="7">0</strong>
+					<strong data-to="3">0</strong>
 					<!-- Set Your Number here. i,e. data-to="56" -->
 					<p>
-						Year Experience
+                    <%= t :year_experience %>
 					</p>
 				</div>
-				<div class="counters-item">
-					<i class="fa fa-trophy fa-2x"></i>
-					<strong data-to="13">0</strong>
-					<!-- Set Your Number here. i,e. data-to="56" -->
+                <div class="counters-item">
+                  <i class="fa fa-graduation-cap fa-4x"></i>
 					<p>
-						Awards Won
+                    <%= t :profession_lti %>
 					</p>
 				</div>
 				<div class="counters-item">
 					<i class="fa fa-thumbs-up fa-2x"></i>
-					<strong data-to="520">0</strong>
+					<strong data-to="10">0</strong>
 					<!-- Set Your Number here. i,e. data-to="56" -->
 					<p>
-						Projects Done
+                    <%= t :projects_contributed %>
 					</p>
 				</div>
 			</div>
@@ -84,27 +80,27 @@
 		</div>
 	</div>
 	<div class="row services">
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<!-- Service -->
 			<div class="services-box new-line item_left">
-				<h4>Customer Support</h4>
+              <h4><%= t :programmer %></h4>
 				<div class="services-box-icon">
 					<i class="fa fa-smile-o fa-3x"></i>
 				</div>
 				<div class="service-box-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellesque imperdiet. Nulla lacinia iaculis nulla.
+                  <p>
+                 Como tarea principal, me gusta programar y realizar software a medida. Testing es un area que estoy tocando solo para darle calidad al software y reducir el margen de error, trato de realizar pruebas importantes utilizo Red, Green, Refactor, TDD, algunas Unitarias y de Modelo.
 					</p>
 				</div>
 			</div>
 			<!-- End Service -->
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<!-- Service -->
 			<div class="services-box new-line item_bottom">
-				<h4>Web Design</h4>
+              <h4><%= t :testing %></h4>
 				<div class="services-box-icon">
-					<i class="fa fa-html5 fa-3x"></i>
+					<i class="fa fa-check fa-3x"></i>
 				</div>
 				<div class="service-box-info">
 					<p>
@@ -114,12 +110,27 @@
 			</div>
 			<!-- End Service -->
 		</div>
-		<div class="col-md-4 clearfix">
+		<div class="col-md-3">
+			<!-- Service -->
+			<div class="services-box new-line item_bottom">
+              <h4><%= t :deploy %></h4>
+				<div class="services-box-icon">
+					<i class="fa fa-cloud-upload fa-3x"></i>
+				</div>
+				<div class="service-box-info">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellesque imperdiet. Nulla lacinia iaculis nulla.
+					</p>
+				</div>
+			</div>
+			<!-- End Service -->
+		</div>
+		<div class="col-md-3 clearfix">
 			<!-- Service -->
 			<div class="services-box new-line item_right">
-				<h4>Wordpress Themes</h4>
+              <h4><%= t :web_design %></h4>
 				<div class="services-box-icon">
-					<i class="fa fa-link fa-3x"></i>
+					<i class="fa fa-html5 fa-3x"></i>
 				</div>
 				<div class="service-box-info">
 					<p>
