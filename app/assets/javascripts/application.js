@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require modernizr
 //= require jquery.sticky
 //= require jquery.easing-1.3.pack
