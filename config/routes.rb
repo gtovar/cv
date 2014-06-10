@@ -1,6 +1,8 @@
 Gilbertotovar::Application.routes.draw do
-  
-  root 'static_pages#home'
+  scope "(:locale)", :locale => /en|es/ do 
+    root to: 'static_pages#home'
+
+  end 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
