@@ -21,14 +21,17 @@
 		</div>
     <!-- some text about yourself -->
 		<div class="col-md-4 item_top">
-			<p class="quoteline">
-				Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.
+          <p class="quoteline">
+          <% t :quote_line %>
 			</p>
-			<p>
-				Hello, I'm a UI/UX Designer & Front End Developer from Dhaka, Bangladesh. I hold a master degree of Web Design from the St. Patrick University.
+            <p>
+            <%= t :about_me_1 %>
 			</p>
-			<p>
-				 I currently work at Intel, where I spend most of my time crafting and working on awesome projects. Lorem ipsum dolor sit amet consectetuer Integer eleifend Curabitur id ut. Quisque Aenean ut pede id elit ligula est mollis sapien magna. Urna turpis quis sagittis at ac Sed augue habitant tortor elit. Dolor Quisque et elit aliquam vitae habitant.
+            <p>
+            <%= t :about_me_2 %>
+			</p>
+            <p>
+            <%= t :about_me_3 %>
 			</p>
             <p class="text-right">
             <%= image_tag "signature.png", alt: "signature" %>
