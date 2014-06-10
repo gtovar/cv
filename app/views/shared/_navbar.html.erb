@@ -28,12 +28,19 @@
 			<li>
             <a href="#clients"><%= t :clients %></a>
 			</li>
-      <li>
-      <a href="#process"><%= t :process %></a>
-			</li>
-			<li>
+            <li>
+            <a href="#process"><%= t :process %></a>
+            </li>
+            <li>
             <a href="#contact"><%= t :contact %></a>
-			</li>
+            </li>
+            <li>
+            <% if I18n.locale == I18n.default_locale %>
+              <%= link_to "English", locale: :en %>
+            <% else %>
+              <%= link_to "Español", locale: :es %>
+            <% end %>
+            </li>
 		</ul>
 		</nav>
 		<!--/.navbar-collapse -->
