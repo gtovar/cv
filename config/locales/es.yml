@@ -1,6 +1,6 @@
 es:
   website: Sitio Web
-  coffe: Cafe
+  coffe: Café
   year_experience: Años de Experiencia
   projects_contributed: Proyectos Contribuidos
   email_spam: No te preocupes, no envío spam.
@@ -10,15 +10,20 @@ es:
   testing: Pruebas
   deployment: Producción
   web_design: Diseño Web
-  about: Quien
+  about: Quién
   me: Soy
   ruby_on_rails_developer: Desarrollador Ruby on Rails
   home: Inicio
-  about_bar: Quien soy
+  about_bar: Quién soy
   works: Portafolio
   skills: Habilidades
   resume: Currículum
   clients: Herramientas
-  process: Metologia
+  process: Metología
   contact: Contacto
+  about_me_1: Acciones pasadas predicen acciones futuras
+  about_me_2: Hello, I'm a UI/UX Designer & Front End Developer from Dhaka, Bangladesh. I hold a master degree of Web Design from the St. Patrick University.
+  about_me_3: I currently work at Intel, where I spend most of my time crafting and working on awesome projects. Lorem ipsum dolor sit amet consectetuer Integer eleifend Curabitur id ut. Quisque Aenean ut pede id elit ligula est mollis sapien magna. Urna turpis quis sagittis at ac Sed augue habitant tortor elit. Dolor Quisque et elit aliquam vitae habitant.
+  all_rights_reserved: Todos los derechos reservados
+  deploy: Producción
 
