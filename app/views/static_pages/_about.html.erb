@@ -21,7 +21,7 @@
       </div>
     <!-- some text about yourself -->
     <div class="col-md-4 item_top">
-      <p class="quoteline">
+      <p class="quoteline" >
       <% t :quote_line %>
       </p>
       <p>
@@ -33,6 +33,7 @@
       <p>
       <%= t :about_me_6 %>
       </p>
+
     </div>
     <!-- ./some text about yourself -->
 		<div class="col-md-4">
@@ -47,7 +48,7 @@
 			<div class="number-counters text-center new-line">
 				<div class="counters-item">
 					<i class="fa fa-coffee fa-2x"></i>
-					<strong data-to="150">0</strong>
+					<strong data-to="2150">0</strong>
 					<!-- Set Your Number here. i,e. data-to="56" -->
 					<p>
                     <%= t :coffe %>
@@ -86,7 +87,12 @@
       <%= t :about_me_5 %>
       </p>
       <p>
-      <%= t :about_me_7 %>.  Conoce mas sobre mis <%= link_to t('clients'), '#clients' %> y sus usos en en la descripción de cada proyecto en mi <%= link_to "Portafilio", '#portfolio' %>.
+      <h3>Open Source</h3>
+      <%= t :about_me_3 %>
+      </p>
+      <p>
+      <h3>Microsoft</h3>
+      <%= t :about_me_7 %> Conoce mas sobre mis <%= link_to t('clients'), '#clients' %> y sus usos en en la descripción de cada proyecto en mi <%= link_to "Portafilio", '#portfolio' %>.
       </p>
       <p class="text-right">
       <%= image_tag "signature.png", alt: "signature" %>
