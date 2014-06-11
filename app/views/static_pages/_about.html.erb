@@ -14,31 +14,28 @@
 	<div class="row">
       <div class="col-md-4 text-center item_bottom">
         <%= image_tag "photo.jpg", class: "img-center img-responsive", alt: "My photo" %>
-			<div class="name-title">
-				<h2>Gilberto Tovar</h2>
-				<h5>Ruby on Rails Developer</h5>
-			</div>
-		</div>
+        <div class="name-title">
+          <h2>Gilberto Tovar</h2>
+          <h5>Ruby on Rails Developer</h5>
+        </div>
+      </div>
     <!-- some text about yourself -->
-		<div class="col-md-4 item_top">
-          <p class="quoteline">
-          <% t :quote_line %>
-			</p>
-            <p>
-            <%= t :about_me_1 %>
-			</p>
-            <p>
-            <%= t :about_me_2 %>
-			</p>
-            <p>
-            <%= t :about_me_3 %>
-			</p>
-            <p class="text-right">
-            <%= image_tag "signature.png", alt: "signature" %>
+    <div class="col-md-4 item_top">
+      <p class="quoteline">
+      <% t :quote_line %>
       </p>
-		</div>
+      <p>
+      <%= t :about_me_1 %>
+      </p>
+      <p>
+      <%= t :about_me_2 %>
+      </p>
+      <p>
+      <%= t :about_me_6 %>
+      </p>
+    </div>
     <!-- ./some text about yourself -->
-		<div class="col-md-4 item_bottom">
+		<div class="col-md-4">
       <!-- some information list -->
 		  <ul class="fa-ul">
             <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
@@ -80,7 +77,23 @@
 				</div>
 			</div>
       <!-- ./some number facts -->
-		</div>
+    </div>
+    <div class="col-md-8">
+      <p>
+      <%= t :about_me_4 %>
+      </p>
+      <p>
+      <%= t :about_me_5 %>
+      </p>
+      <p>
+      <%= t :about_me_7 %>.  Conoce mas sobre mis <%= link_to t('clients'), '#clients' %> y sus usos en en la descripción de cada proyecto en mi <%= link_to "Portafilio", '#portfolio' %>.
+      </p>
+      <p class="text-right">
+      <%= image_tag "signature.png", alt: "signature" %>
+      </p>
+    </div>
+
+
 	</div>
 	<div class="row services">
 		<div class="col-md-3">
@@ -92,8 +105,7 @@
 				</div>
 				<div class="service-box-info">
                   <p>
-                 Como tarea principal, me gusta programar y realizar software a medida. Testing es un area que estoy tocando solo para darle calidad al software y reducir el margen de error, trato de realizar pruebas importantes utilizo Red, Green, Refactor, TDD, algunas Unitarias y de Modelo.
-					</p>
+                  Para el desarrollo de software, cuento con Ruby on Rails, siguiendo una <%= link_to "Metodología Agil", "http://www.amazon.es/The-Agile-Samurai-Pragmatic-Programmers/dp/1934356581" %>. Mi ambiente de desarrollo es en Ubuntu, <%= link_to "Tmuxinator", "http://vimeo.com/76108975" %> y mi editor favorito es <%= link_to "VIM", "http://www.vim.org/about.php" %>. Brindar soporte a las aplicaciones forma parte del ser programador y comprendo la importancia del apoyo continuo después de la entrega del producto final.</p>
 				</div>
 			</div>
 			<!-- End Service -->
@@ -107,7 +119,7 @@
 				</div>
 				<div class="service-box-info">
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellesque imperdiet. Nulla lacinia iaculis nulla.
+                    Aprender a realizar pruebas ofrece calidad al software y esto se traduce en reducir el margen de error y muchos otros beneficios. Es bueno saber que tus cambios no rompen nada, muchas veces no son pagadas o requeridas pero trato de realizar al menos algunas que yo considere importantes, utilizando Red, Green, Refactor, TDD, algunas Unitarias y de Modelo. Herramientas utilizadas <%= link_to "Errbit", "https://github.com/errbit/errbit" %> y <%= link_to "CircleCI", "https://circleci.com/" %>.
 					</p>
 				</div>
 			</div>
@@ -121,8 +133,8 @@
 					<i class="fa fa-cloud-upload fa-3x"></i>
 				</div>
 				<div class="service-box-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellesque imperdiet. Nulla lacinia iaculis nulla.
+                  <p>
+                  Desplegar en produccion, es una tarea que siempre tube la inquietud de realizar para poder por fin enfrentar todo un ciclo de implementacion. Los servidores sus servicios y configuraciones los descubri en <%= link_to "Digital Ocean", "https://www.digitalocean.com/" %>, Ngnix, Capistrano, Unicorn, RaislCast y demas tutoriales. Siempre con la mentalidad de que todos tienen cosas que hacer y de que tienes que ser autodidacta.
 					</p>
 				</div>
 			</div>
@@ -136,8 +148,8 @@
 					<i class="fa fa-html5 fa-3x"></i>
 				</div>
 				<div class="service-box-info">
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque rutrum pellesque imperdiet. Nulla lacinia iaculis nulla.
+                  <p>
+                  Tambien como todo ay que tocar el Fron-End con leguajes de programación que permitan ser atractivo, interactivo y mejor desempeño en el sitio, lenguajes como NodeJS, Ember, Angular, Knockout y Backbones son lenguajes que me gustaria utilizar y que hasta hoy solo e leido en mis <%= link_to "Libros", root_path %>. Me gustan mucho los temas de SEO, Marketing, Gamificación, UX/UI , Desiño Web como responsivo.
 					</p>
 				</div>
 			</div>
