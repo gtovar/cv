@@ -37,8 +37,8 @@
 </p>
 
 <p>
-  <strong>Cover:</strong>
-  <%= @proyect.cover %>
+<strong>Cover:</strong>
+<%= image_tag @proyect.cover_url(:thumb) if @proyect.cover? %>
 </p>
 
 <%= link_to 'Edit', edit_proyect_path(@proyect) %> |
