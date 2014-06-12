@@ -1,6 +1,10 @@
 Gilbertotovar::Application.routes.draw do
+
+  resources :proyects
+
   scope "(:locale)", :locale => /en|es/ do 
     root to: 'static_pages#home'
+    resources :proyects
 
   end 
   # The priority is based upon order of creation: first created -> highest priority.
