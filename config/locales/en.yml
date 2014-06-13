@@ -228,5 +228,14 @@ en:
   testing_box: How to test software offers quality and reduces the margin of error and many other benefits. Good to know that new code introduced not break anything, in many cases, test are not paid or required but I try to make at least some that I consider important, using Red, Green, Refactor, TDD, some Unity test, etc. Tools used Errbit and CircleCI.
   deployment_box: Deploy a E-commerce like Spree in Digital Ocean, Create Apis or consume Apis, Services as ssh certificate, Ngnix, Capistrano, Unicorn, RailsCast and other tutorials serve me to Deploying to production,this is a task that always want to perform to finally face a cycle of implementation. Servers, services,  and settings was a part from my route to learn. Always with the mindset that everyone has things to do and you have to teach yourself.
   web_design_box: Also as all programmers need to touch Fron-End with programming languages that allow it to be attractive, interactive and improve site performance, as caching strategies, languages like NodeJS, Ember, Angular, Knockout, Backbones and go - The Go Programming Language - Google Project Hosting, are languages I would like to implement because until today, in any project are implemented yet. I really like the topics of SEO, Marketing, Gamification, UX / UI, Web Responsive Design.
+  proyect: Proyect
+  tasks: Tasks
+  outstaning: Outstaning  
+  tools: Tools
+  created_at: Created at
+  live_demo: Live demo
+  position: Position
+
+  
 
 
