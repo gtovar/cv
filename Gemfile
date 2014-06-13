@@ -47,3 +47,8 @@ gem "rmagick"
 gem "carrierwave"
 gem "fog"
 gem "friendly_id"
+group :test, :development do
+  gem "rspec-rails"
+  gem "pry-rails"
+end
+
