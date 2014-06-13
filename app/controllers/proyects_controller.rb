@@ -69,6 +69,6 @@ class ProyectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proyect_params
-      params.require(:proyect).permit(:name, :start_time, :end_time, :position, :activities, :outstaning, :tools, :description, :cover)
+      params.require(:proyect).permit(:name, :start_time, :end_time, :position, :activities, :outstaning, :tools, :description, :cover,:link,:logo)
     end
 end
