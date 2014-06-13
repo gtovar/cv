@@ -1,4 +1,6 @@
-<section id="proyect" style="padding-top:100px; color: wheat;" class="section-content bg3"  >
+<%= render "navbar" %>
+<section id="proyect" class="slide-content" style="padding-top:100px; color: wheat; position: static; text-align: left;" >
+<p id="notice"><%= notice %></p>
 <div class="single-portfolio">
   <div class="container">
     <div class="row">
@@ -6,14 +8,14 @@
         <div class="slider_container">
           <ul class="slides">
             <li>
-            <a class="w_hover" href="<%= root_url %>">
+            <a class="w_hover" href="<%= @proyect.link %>">
               <%= image_tag(@proyect.cover_url(:thumb) , class: "img-responsive", alt: "@proyect.name") if @proyect.cover?%>
               <span class="overlay"></span>
             </a>
             </li>
             <li>
-            <a class="w_hover" href="">
-              <img src="<%= asset_path 'portfolio/thumb2.jpg' %>" class="img-responsive" alt="">
+            <a class="w_hover" href="<%= @proyect.link %> ">
+              <%= image_tag @proyect.logo, class: "img-responsive", alt: @proyect.name  %>
               <span class="overlay"></span>
             </a>
             </li>
@@ -27,68 +29,114 @@
           <h3><%= @proyect.name%></h3>
           <div class="line-strong"></div>
           <ul class="list-details">
-            <li><i class="fa fa-calendar"></i>
-<%= "#{l @proyect.start_time, format: :long} - #{l @proyect.end_time, format: :long} - " %>
-<%= distance_of_time_in_words(@proyect.start_time,@proyect.end_time) %></i>
-            <li><i class="fa fa-tag"></i> design, logo</li>
-            <li><i class="fa fa-globe"></i><a href="http://addupstaging.herokuapp.com/">Add Up</a></li>
-          </ul>
-          <p>
-          <%= @proyect.description %>
-          </p>
-        </div>   
-        <!-- End Project Summary -->
-      </div>
+            <li><i class="fa fa-calendar"></i><strong><%= t :created_at %>:&nbsp; </strong>
+            <%= "#{l @proyect.start_time, format: :long} / #{distance_of_time_in_words(@proyect.start_time,@proyect.end_time)}" %>
+            </li>
+            <li><i class="fa fa-tag"></i><strong><%= t :position %>:&nbsp;</strong><%= @proyect.position %></li>
+          <li><i class="fa fa-globe"></i><%= link_to t('live_demo'), @proyect.link %></li>
+        </ul>
+        <p>
+        <%= @proyect.description %>
+        </p>
+      </div>   
+      <!-- End Project Summary -->
     </div>
-    <!-- End .row -->
   </div>
-  <!-- End .container -->
+  <!-- End .row -->
+</div>
+<!-- End .container -->
 </div>
 
+</section>
 
-<p id="notice"><%= notice %></p>
+<section id="activities"   style="padding-top:10px; color: wheat;" class="section-content bg3" >
+<div class="container">
+  <div class="row">
+    <!-- Section Title -->
+    <div class="section-title item_bottom text-center">
+      <h3><%= t :task %></h3>
+    </div>
+    <!-- End Section Title -->
+  </div>
+  <div class="row">
+    <!-- ./some text about yourself -->
+    <div class="col-md-4">
+      <!-- some information list -->
+      <ul class="fa-ul">
+        <li>
+        <%= @proyect.activities %></li>
+        <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
+        <li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : tovarninogilberto@gmail.com</li>
+        <li><i class="fa fa-li fa-globe"></i><strong><%= t :website %></strong> : www.gilbertotovar.com</li>
+      </ul>
+      <!-- ./some information list -->
+    </div>
+    <div class="col-md-8">
+      <p>
+      <%= t :about_me_4 %>
+      </p>
+      <p>
+      <%= t :about_me_5 %>
+      </p>
+    </div>
+  </div>
+</div>
+</section>
 
-<p>
-<strong>Name:</strong>
-<%= @proyect.name %>
-</p>
+<section id="outstanding"   style="padding-top:10px; color: black;" class="section-content bg2" >
+<div class="container">
+  <div class="row">
+    <!-- Section Title -->
+    <div class="section-title item_bottom text-center">
+      <h3><%= t :outstanding %></h3>
+    </div>
+    <!-- End Section Title -->
+  </div>
+  <div class="row">
+    <!-- ./some text about yourself -->
+      <p>
+      <%= @proyect.outstaning %>
+      </p>
+  </div>
+</div>
+</section>
 
-<p>
-<strong>Span:</strong>
-<%= "#{l @proyect.start_time, format: :long} - #{@proyect.end_time}" %>
-<span style="background-color:white;"><%= distance_of_time_in_words(@proyect.start_time,@proyect.end_time) %></span>
-</p>
+<section id="clients" class="clients parallax" style="background-image: url(assets/clients.png)">
+<div class="parallax-overlay">
+  <div class="container">
+    <div class="row">
+      <!-- Section title -->
+      <div class="section-title item_bottom text-center">
+        <div>
+          <span class="fa fa-users fa-2x"></span>
+        </div>
+        <h3 class="white"><%= t :tools %></h3>
+      </div>
+      <!-- End Section title -->
+    </div>
 
-<p>
-<strong>Position:</strong>
-<%= @proyect.position %>
-</p>
 
-<p>
-<strong>Activities:</strong>
-<%= @proyect.activities %>
-</p>
-
-<p>
-<strong>Outstaning:</strong>
-<%= @proyect.outstaning %>
-</p>
-
-<p>
-<strong>Tools:</strong>
-<%= @proyect.tools %>
-</p>
-
-<p>
-<strong>Description:</strong>
-<%= @proyect.description %>
-</p>
-
-<p>
-<strong>Cover:</strong>
-<%= image_tag @proyect.cover_url(:thumb) if @proyect.cover? %>
-</p>
+    <div class="row new-line item_fade_in">
+      <h4 class="white"><%= @proyect.tools %></h4>
+      <div class="carrousel-container">
+        <div id="left_scroll"><a href=""></a></div>
+        <div id="carousel_inner">
+          <ul class="clearfix" id="carousel_ul">
+            <li><span><%= image_tag "clients/twitter.png",alt: "Twitter" %></span></li>
+            <li><span><%= image_tag "clients/magento.png",alt: "magento" %></span></li>
+            <li><span><%= image_tag "clients/mailchimp.png", alt: "mailchimp" %></span></li>
+            <li><span><%= image_tag "clients/nexternal.png", alt: "nexternal" %></span></li>
+            <li><span><%= image_tag "clients/wordpress.png", alt: "wordpress" %></span></li>
+            <li><span><%= image_tag "clients/google.png", alt: "google" %></span></li>
+          </ul>
+        </div>
+        <div id="right_scroll"><a href=""></a></div>
+        <input type="hidden" id="hidden_auto_slide_seconds" value=0 />
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <%= link_to 'Edit', edit_proyect_path(@proyect) %> |
 <%= link_to 'Back', proyects_path %>
-</section>
