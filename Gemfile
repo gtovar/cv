@@ -46,3 +46,4 @@ end
 gem "rmagick"
 gem "carrierwave"
 gem "fog"
+gem "friendly_id"
