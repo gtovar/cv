@@ -1,0 +1,36 @@
+<div class="navbar navbar-transparent navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+          </button>
+          <%= link_to image_tag("logo.png",:class=>"logo",:alt => "Lic. Gilberto Tovar"), :class => "navbar-brand",:href => "#"%>
+		</div>
+		<nav id="my-nav" class="navbar-collapse collapse" role="navigation">
+		<ul class="nav navbar-nav">
+			<li>
+            <a href="#proyect"><%= t :proyect %></a>
+			</li>
+			<li>
+            <a href="#activities"><%= t :activities %></a>
+			</li>
+			<li>
+            <a href="#outstanding"><%= t :outstaning %></a>
+			</li>
+			<li>
+            <a href="#tools"><%= t :tools %></a>
+            </li>
+            <li>
+            <% if I18n.locale == I18n.default_locale %>
+              <%= link_to "English", locale: :en %>
+            <% else %>
+              <%= link_to "Español", locale: :es %>
+            <% end %>
+            </li>
+		</ul>
+		</nav>
+		<!--/.navbar-collapse -->
+	</div>
+</div>
