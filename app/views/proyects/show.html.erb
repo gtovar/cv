@@ -1,39 +1,87 @@
+<section id="proyect" style="padding-top:100px; color: wheat;" class="section-content bg3"  >
+<div class="single-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" id="primary">
+        <div class="slider_container">
+          <ul class="slides">
+            <li>
+            <a class="w_hover" href="<%= root_url %>">
+              <%= image_tag(@proyect.cover_url(:thumb) , class: "img-responsive", alt: "@proyect.name") if @proyect.cover?%>
+              <span class="overlay"></span>
+            </a>
+            </li>
+            <li>
+            <a class="w_hover" href="">
+              <img src="<%= asset_path 'portfolio/thumb2.jpg' %>" class="img-responsive" alt="">
+              <span class="overlay"></span>
+            </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4" id="secondary">
+        <!-- Project Summary -->
+        <div class="project-desc">
+          <h3><%= @proyect.name%></h3>
+          <div class="line-strong"></div>
+          <ul class="list-details">
+            <li><i class="fa fa-calendar"></i>
+<%= "#{l @proyect.start_time, format: :long} - #{l @proyect.end_time, format: :long} - " %>
+<%= distance_of_time_in_words(@proyect.start_time,@proyect.end_time) %></i>
+            <li><i class="fa fa-tag"></i> design, logo</li>
+            <li><i class="fa fa-globe"></i><a href="http://addupstaging.herokuapp.com/">Add Up</a></li>
+          </ul>
+          <p>
+          <%= @proyect.description %>
+          </p>
+        </div>   
+        <!-- End Project Summary -->
+      </div>
+    </div>
+    <!-- End .row -->
+  </div>
+  <!-- End .container -->
+</div>
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @proyect.name %>
+<strong>Name:</strong>
+<%= @proyect.name %>
 </p>
 
 <p>
-  <strong>Span:</strong>
-  <%= "#{l @proyect.start_time, format: :long} - #{@proyect.end_time}" %>
-  <%= distance_of_time_in_words(@proyect.start_time,@proyect.end_time) %>
+<strong>Span:</strong>
+<%= "#{l @proyect.start_time, format: :long} - #{@proyect.end_time}" %>
+<span style="background-color:white;"><%= distance_of_time_in_words(@proyect.start_time,@proyect.end_time) %></span>
 </p>
 
 <p>
-  <strong>Position:</strong>
-  <%= @proyect.position %>
+<strong>Position:</strong>
+<%= @proyect.position %>
 </p>
 
 <p>
-  <strong>Activities:</strong>
-  <%= @proyect.activities %>
+<strong>Activities:</strong>
+<%= @proyect.activities %>
 </p>
 
 <p>
-  <strong>Outstaning:</strong>
-  <%= @proyect.outstaning %>
+<strong>Outstaning:</strong>
+<%= @proyect.outstaning %>
 </p>
 
 <p>
-  <strong>Tools:</strong>
-  <%= @proyect.tools %>
+<strong>Tools:</strong>
+<%= @proyect.tools %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @proyect.description %>
+<strong>Description:</strong>
+<%= @proyect.description %>
 </p>
 
 <p>
@@ -43,3 +91,4 @@
 
 <%= link_to 'Edit', edit_proyect_path(@proyect) %> |
 <%= link_to 'Back', proyects_path %>
+</section>
