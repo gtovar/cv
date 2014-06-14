@@ -18,6 +18,12 @@
       <div id="intro-loader">
       </div>
     </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
     <%= render "shared/footer" %>
     <%= javascript_include_tag "application" %>

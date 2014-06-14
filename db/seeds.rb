@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+@user = User.new(:email => ENV['USER_EMAIL'], :password => ENV['USER_PASSWORD'], :password_confirmation => ENV['USER_PASSWORD'])
+if @user.save
+  puts "User was created"
+else
+  puts  @user.errors.inspect
+end

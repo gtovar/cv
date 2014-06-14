@@ -1,6 +1,6 @@
 class ProyectsController < ApplicationController
   before_action :set_proyect, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: :show
   # GET /proyects
   # GET /proyects.json
   def index
