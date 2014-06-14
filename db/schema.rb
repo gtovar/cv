@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140613055146) do
+ActiveRecord::Schema.define(version: 20140613224732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "proyect_translations", force: true do |t|
+    t.integer  "proyect_id",  null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "position"
+    t.string   "activities"
+    t.string   "outstaning"
+    t.string   "description"
+  end
+
+  add_index "proyect_translations", ["locale"], name: "index_proyect_translations_on_locale", using: :btree
+  add_index "proyect_translations", ["proyect_id"], name: "index_proyect_translations_on_proyect_id", using: :btree
 
   create_table "proyects", force: true do |t|
     t.string   "name"
