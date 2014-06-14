@@ -46,3 +46,10 @@ end
 gem "rmagick"
 gem "carrierwave"
 gem "fog"
+gem 'globalize'
+
+group :test, :development do
+  gem "rspec-rails"
+  gem "pry-rails"
+end
+
