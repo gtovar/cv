@@ -63,6 +63,8 @@ GEM
     fog-json (1.0.0)
       multi_json (~> 1.0)
     formatador (0.2.5)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     globalize (4.0.1)
       activemodel (>= 4.0.0, < 5)
       activerecord (>= 4.0.0, < 5)
@@ -172,6 +174,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   fog
+  friendly_id (~> 5.0.0)
   globalize
   jbuilder (~> 1.2)
   jquery-rails
