@@ -32,6 +32,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -39,6 +40,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    diff-lcs (1.2.5)
     erubis (2.7.0)
     excon (0.37.0)
     execjs (2.2.0)
@@ -61,6 +63,9 @@ GEM
     fog-json (1.0.0)
       multi_json (~> 1.0)
     formatador (0.2.5)
+    globalize (4.0.1)
+      activemodel (>= 4.0.0, < 5)
+      activerecord (>= 4.0.0, < 5)
     hike (1.2.3)
     i18n (0.6.9)
     ipaddress (0.8.0)
@@ -74,6 +79,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.0)
     minitest (4.7.5)
@@ -85,6 +91,12 @@ GEM
       mini_portile (= 0.6.0)
     pg (0.17.1)
     polyglot (0.3.5)
+    pry (0.10.0)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -105,6 +117,22 @@ GEM
     rdoc (4.1.1)
       json (~> 1.4)
     rmagick (2.13.2)
+    rspec-core (3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-expectations (3.0.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.0.0)
+    rspec-mocks (3.0.1)
+      rspec-support (~> 3.0.0)
+    rspec-rails (3.0.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 3.0.0)
+      rspec-expectations (~> 3.0.0)
+      rspec-mocks (~> 3.0.0)
+      rspec-support (~> 3.0.0)
+    rspec-support (3.0.0)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -114,6 +142,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -143,11 +172,14 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   fog
+  globalize
   jbuilder (~> 1.2)
   jquery-rails
   pg
+  pry-rails
   rails (= 4.0.1)
   rmagick
+  rspec-rails
   sass-rails (~> 4.0.0)
   sdoc
   turbolinks
