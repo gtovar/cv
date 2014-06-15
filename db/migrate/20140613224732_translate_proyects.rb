@@ -3,8 +3,9 @@ class TranslateProyects < ActiveRecord::Migration
     Proyect.create_translation_table!({
       :position => :string,
       :activities => :string,
-      :outstaning => :string,
-      :description => :string
+      :outstaning => :text,
+      :description => :text,
+      :activity_description => :text
     }, {
       :migrate_data => true
     })

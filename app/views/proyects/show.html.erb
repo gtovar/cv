@@ -62,20 +62,13 @@
     <div class="col-md-4">
       <!-- some information list -->
       <ul class="fa-ul">
-        <li>
-        <%= @proyect.activities %></li>
-        <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
-        <li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : tovarninogilberto@gmail.com</li>
-        <li><i class="fa fa-li fa-globe"></i><strong><%= t :website %></strong> : www.gilbertotovar.com</li>
+       <%= raw @proyect.activities %>
       </ul>
       <!-- ./some information list -->
     </div>
     <div class="col-md-8">
       <p>
-      <%= t :about_me_4 %>
-      </p>
-      <p>
-      <%= t :about_me_5 %>
+      <%= @proyect.activity_description %>
       </p>
     </div>
   </div>

@@ -6,10 +6,11 @@ class CreateProyects < ActiveRecord::Migration
       t.date :end_time
       t.string :position
       t.string :activities
-      t.string :outstaning
+      t.text :outstaning
       t.string :tools
-      t.string :description
+      t.text :description
       t.string :cover
+      t.text :activity_description
 
       t.timestamps
     end

@@ -30,14 +30,15 @@ ActiveRecord::Schema.define(version: 20140614231527) do
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "proyect_translations", force: true do |t|
-    t.integer  "proyect_id",  null: false
-    t.string   "locale",      null: false
+    t.integer  "proyect_id",           null: false
+    t.string   "locale",               null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "position"
     t.string   "activities"
-    t.string   "outstaning"
-    t.string   "description"
+    t.text     "outstaning"
+    t.text     "description"
+    t.text     "activity_description"
   end
 
   add_index "proyect_translations", ["locale"], name: "index_proyect_translations_on_locale", using: :btree
@@ -49,10 +50,11 @@ ActiveRecord::Schema.define(version: 20140614231527) do
     t.date     "end_time"
     t.string   "position"
     t.string   "activities"
-    t.string   "outstaning"
+    t.text     "outstaning"
     t.string   "tools"
-    t.string   "description"
+    t.text     "description"
     t.string   "cover"
+    t.text     "activity_description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
