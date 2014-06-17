@@ -1,7 +1,13 @@
 <%= render 'navbar' %>
+<section id="proyect" class="slide-content" style="padding-top:100px; color: wheat; position: static; text-align: left;" >
+<div class="container">
+    <div class="row">
 <h1>Editing proyect</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @proyect %> |
-<%= link_to 'Back', proyects_path %>
+<%= link_to 'Show', @proyect, class: "btn btn-primary btn-lg active",  role: "button"  %> |
+<%= link_to 'Back', proyects_path, class: "btn btn-default btn-lg active",  role: "button"  %>
+</div>
+</div>
+</section>
