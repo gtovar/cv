@@ -7,7 +7,7 @@
 		<div>
 			<span class="fa fa-briefcase fa-2x"></span>
 		</div>
-		<h1 class="white">My <span>Works</span></h1>
+        <h1 class="white"><span><%= t :proyects %></span></h1>
 	</div>
 	<!-- End Section title -->
 </div>
@@ -45,204 +45,35 @@
 	<!-- End #portfolio-page -->
 </div>
 <!-- End #portfolio-wrap -->
-<div id="portfolio-filter">
-		<div class="row text-center">
-			<div class="col-md-12">
-				<!--portfolio category-->
-				<ul class="portfolio-filter-list white">
-					<li>
-					<a class="active" href="#" data-cat="*">ALL</a>
-					</li>
-					<li>
-					<a href="#" data-cat="design">Design</a>
-					</li>
-					<li>
-					<a href="#" data-cat="photo">Photography</a>
-					</li>
-					<li>
-					<a href="#" data-cat="video">Video</a>
-					</li>
-					<li>
-					<a href="#" data-cat="web">Web</a>
-					</li>
-					<li>
-					<a href="#" data-cat="mobile">Mobile</a>
-					</li>
-				</ul>
-				<!--End portfolio category-->
-			</div>
-			<!-- End .col-md-12 -->
-		</div>
-		<!-- End .row -->
-</div>
 </div>
 <!-- End .container -->
 
 <!-- End #portfolio-filter -->
 <div class="container">
-	<div class="row">
-   <div class="col-md-12">
-		<div id="portfolio-items" class="portfolio-items item_fade_in">
-			<article class="design photo">
-            <a href="/proyects/2">
-              <%= image_tag "portfolio/thumb1.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Design / Photo</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="photo web video">
-            <a href="#!projects/project-video.html">
-              <%= image_tag "portfolio/thumb2.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-film"></i>
-					<h3>Project with video</h3>
-					<span>Photo / Web</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-            <article class="video design mobile">
-			<a href="#!projects/project-single.html">
-              <%= image_tag "portfolio/thumb3.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Design / Video</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="web photo">
-			<a href="#!projects/project-slider.html">
-              <%= image_tag "portfolio/thumb4.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-picture-o"></i>
-					<h3>Project with gallery</h3>
-					<span>Web / Photo</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="mobile video">
-			<a href="#!projects/project-video.html">
-              <%= image_tag "portfolio/thumb5.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-film"></i>
-					<h3>Project with video</h3>
-					<span>Mobile</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="photo video">
-			<a href="#!projects/project-slider.html">
-              <%= image_tag "portfolio/thumb6.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-picture-o"></i>
-					<h3>Project with gallery</h3>
-					<span>Photo / Video</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="web mobile video">
-			<a href="#!projects/project-single.html">
-              <%= image_tag "portfolio/thumb7.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Web / Mobile</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-			<article class="video photo web design">
-			<a href="#!projects/project-single.html">
-              <%= image_tag "portfolio/thumb8.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Video / Photo / Web</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-      <article class="design photo">
-			<a href="#!projects/project-single.html">
-              <%= image_tag "portfolio/thumb9.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Design / Photo</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-      <article class="web photo">
-			<a href="#!projects/project-slider.html">
-              <%= image_tag "portfolio/thumb10.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-picture-o"></i>
-					<h3>Project with gallery</h3>
-					<span>Web / Photo</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-      <article class="video design mobile">
-			<a href="#!projects/project-single.html">
-              <%= image_tag "portfolio/thumb11.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-camera"></i>
-					<h3>Project with single image</h3>
-					<span>Design / Video</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-      <article class="photo web video">
-			<a href="#!projects/project-video.html">
-              <%= image_tag "portfolio/thumb12.jpg", :alt => "image" %>
-			<div class="overlay">
-				<div class="item-info">
-					<i class="fa fa-film"></i>
-					<h3>Project with video</h3>
-					<span>Photo / Web</span>
-				</div>
-			</div>
-			<!-- End .overlay -->
-			</a>
-			</article>
-		</div>
-		<!-- End #portfolio-items.portfolio-items -->
-   </div> 
-	</div>
+  <div class="row">
+    <div class="col-md-12">
+      <div id="portfolio-items" class="portfolio-items item_fade_in">
+
+        <% @proyects.each do |proyect| %>
+          <article class="design photo">
+          <%= link_to(proyect) do %>
+            <%= image_tag(proyect.cover_url(:thumb), :alt => "image") %>
+            <div class="overlay">
+              <div class="item-info">
+                <i class="fa fa-camera"></i>
+                <h3><%= proyect.name %></h3>
+                <span><%= proyect.category %></span>
+              </div>
+            </div>
+            <!-- End .overlay -->
+          <% end %>
+          </article>
+        <% end %>
+
+      </div>
+      <!-- End #portfolio-items.portfolio-items -->
+    </div> 
+  </div>
 </div>
 </section>
 <!-- End Portfolio Section -->
