@@ -218,7 +218,7 @@ es:
   about_me_4: Cientos de horas, miles de lineas de codigo, dolores de cabeza, litros de café, descubres que 24 horas no bastan. Nuevos retos como cross browser, realizar testing, muchos terminos nuevos y desconocidos, nuevas practicas, realizar blueprints, mocksup saber que existen herramientas como Balsamiq, Cacoo para crear diagramas, kanbanflow para medir tu tiempo, etc. Saber que puedes administrar un proyecto con PivotalTracker y de hecho también puedes utilizar Github, en pocas palabras todo un mundo. 
   about_me_5: Creo que lo más importante que puedo concluir, que es bueno tener nociones de todo, que algunos de los muchos requerimientos de una aplicación a los que te enfrentas ya han sido desarrollados y estan disponibles para su uso, creo que esto es el corazon. Clientes ó Empresas, siempre buscan ofrecer calidad a un buen precio, y esto se refleja en ahorros de tiempo y dinero, se sabe que hoy en día las cosas son para ayer.No hay que reinvientar la rueda, la comunidad es muy creativa e inovadora, siempre  proponiendo y haciendo entregas de funcionales nuevas un ejemplo claro de esto es el sistema de gemas que maneja Ruby on Rails que es una maravilla.
   about_me_6: Actualmente, busco una oportunidad en especial como desarrollador Back-End; aunque como Front-End me gustan mucho los temas de SEO, Marketing, Gamificación, UX/UI , Diseño Web Responsivo y estoy consiente de que estos temas generan nuevos puestos dentro de las empresas,  aun así dedico más tiempo a lenguajes de programación y leer libros en mi Kindle, siempre buscando las mejores practicas, nuevas propuestas para hacer las cosas, nuevos razonamientos, refactoreo, casos de éxito, nuevas estrategias, etc. Como desarrollador, el Front-End es parte fundamental de una aplicación y necesita siempre propuestas modernas, lenguajes de programación que permitan al sitio ser más atractivo e interactivo, lenguajes como NodeJS, Ember, Angular, Knockout, Backbones, SASS, CoffeScript etc.
-  about_me_7: .Net siempre fue mi lenguaje favorito y hasta el día hoy me sigue gustando VB.net ya sea para escritorio o web, me dio la pauta para adentrarme a este fascinante mundo, tengo muchos proyectos academicos, y algunos reales. Siempre estoy abierto a recibir propuestas para desarrollar en .Net. Conoce mas sobre mis <a href="#clients">Herramientas</a> y sus usos en en la descripción de cada proyecto en mi <a href="#portfolio">Portafilio</a>.
+  about_me_7: .Net siempre fue mi lenguaje favorito y hasta el día hoy me sigue gustando VB.net ya sea para escritorio o web, me dio la pauta para adentrarme a este fascinante mundo, tengo muchos proyectos academicos, y algunos reales. Siempre estoy abierto a recibir propuestas para desarrollar en .Net. Conoce mas sobre mis <a href="#clients">Herramientas</a> y sus usos en en la descripción de cada proyecto en mi <a href="#portfolio">Portafolio</a>.
   all_rights_reserved: Todos los derechos reservados
   deploy: Implementación
   programmer_box: Para el desarrollo de software, cuento con más experiencia en Ruby on Rails, sigo una <a href="http://www.amazon.es/The-Agile-Samurai-Pragmatic-Programmers/dp/1934356581">Metodología Agil</a>. Mi ambiente de desarrollo es en Ubuntu, <a href="http://vimeo.com/76108975">Tmuxinator</a> y mi editor favorito es <a href="http://www.vim.org/about.php">VIM</a>. Brindar soporte a las aplicaciones forma parte del ser programador y comprendo la importancia del apoyo continuo después de la entrega del producto final.
@@ -232,5 +232,23 @@ es:
   created_at: Creado
   live_demo: Ver Sitio
   position: Puesto
-
-
+  work: Trabajo 
+  my: Mi
+  proyects: Proyectos
+  free_lancer_description: Estoy disponible como  
+  job_want: Desarrollador
+  hire_me: Contáctame
+  download_resume: Descargar Curriculum
+  skills: Habilidades
+  team_work: Trabajo en Equipo
+  team_work_definition: Es importante trabajar en equipo.
+  self_taught: Autodidacto
+  self_taught_definition: Ser autodidacta en todo.
+  methodic: Metódico
+  methodic_definition: Seguir una metodoligia te ayuda a ser ordenado.
+  helpful: Servicio
+  helpful_definition: Con tres años en atencion a clientes en banorte y en el area de software.
+  transition: Adaptación
+  transition_definition: Si hay que aprender windows si ay que dejar de usar o usar nuevas herramientas
+  produce_results: Resultados
+  produce_results_definition: Como parte de ser metodico siempre es para dar resultados, si te piden hacer algo cumplir.
