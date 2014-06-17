@@ -32,7 +32,7 @@ class LogoUploader < CarrierWave::Uploader::Base
   # end
 
   # Create different versions of your uploaded files:
-   version :thumb do
+   version :slide do
      process :resize_to_fit => [640, 427]
    end
 
