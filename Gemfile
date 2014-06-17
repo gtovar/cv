@@ -52,5 +52,6 @@ gem 'friendly_id', '~> 5.0.0'
 group :test, :development do
   gem "rspec-rails"
   gem "pry-rails"
+  gem "xray-rails"
 end
 gem 'devise'
