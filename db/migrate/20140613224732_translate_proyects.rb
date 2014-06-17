@@ -2,10 +2,11 @@ class TranslateProyects < ActiveRecord::Migration
   def self.up
     Proyect.create_translation_table!({
       :position => :string,
-      :activities => :string,
+      :activities => :text,
       :outstaning => :text,
       :description => :text,
-      :activity_description => :text
+      :activity_description => :text,
+      :category => :string
     }, {
       :migrate_data => true
     })

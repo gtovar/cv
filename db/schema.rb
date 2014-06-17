@@ -35,10 +35,11 @@ ActiveRecord::Schema.define(version: 20140614231527) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "position"
-    t.string   "activities"
+    t.text     "activities"
     t.text     "outstaning"
     t.text     "description"
     t.text     "activity_description"
+    t.string   "category"
   end
 
   add_index "proyect_translations", ["locale"], name: "index_proyect_translations_on_locale", using: :btree
@@ -49,12 +50,13 @@ ActiveRecord::Schema.define(version: 20140614231527) do
     t.date     "start_time"
     t.date     "end_time"
     t.string   "position"
-    t.string   "activities"
+    t.text     "activities"
     t.text     "outstaning"
     t.string   "tools"
     t.text     "description"
     t.string   "cover"
     t.text     "activity_description"
+    t.string   "category"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "link"
