@@ -1,24 +1,24 @@
 <!-- About Section -->
 <section id="about" class="section-content bg1">
 <div class="container">
-	<div class="row">
-		<!-- Section Title -->
-		<div class="section-title item_bottom text-center">
-			<div>
-				<span class="fa fa-user fa-2x"></span>
-			</div>
-            <h1><%= t :about %> <span><%= t :me %></span></h1>
-		</div>
-		<!-- End Section Title -->
-	</div>
-	<div class="row">
-      <div class="col-md-4 text-center item_bottom">
-        <%= image_tag "photo.jpg", class: "img-center img-responsive", alt: "My photo" %>
-        <div class="name-title">
-          <h2>Gilberto Tovar</h2>
-          <h5>Ruby on Rails Developer</h5>
-        </div>
+  <div class="row">
+    <!-- Section Title -->
+    <div class="section-title item_bottom text-center">
+      <div>
+        <span class="fa fa-user fa-2x"></span>
       </div>
+      <h1><%= t :about %> <span><%= t :me %></span></h1>
+    </div>
+    <!-- End Section Title -->
+  </div>
+  <div class="row">
+    <div class="col-md-4 text-center item_bottom">
+      <%= image_tag "photo.jpg", class: "img-center img-responsive", alt: "My photo" %>
+      <div class="name-title">
+        <h2>Gilberto Tovar</h2>
+        <h5>Ruby on Rails / .NET Developer</h5>
+      </div>
+    </div>
     <!-- some text about yourself -->
     <div class="col-md-4 item_top">
       <p class="quoteline" >
@@ -27,142 +27,163 @@
       <p>
       <%= t :about_me_1 %>
       </p>
+      <%= raw t :about_me_2 %>
       <p>
-      <%= t :about_me_2 %>
-      </p>
-      <p>
-      <%= t :about_me_6 %>
+      <%= raw t :about_me_6 %>
       </p>
 
     </div>
     <!-- ./some text about yourself -->
-		<div class="col-md-4">
+    <div class="col-md-4">
       <!-- some information list -->
-		  <ul class="fa-ul">
-            <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
-            <li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : <%= ENV['USER_EMAIL'] %></li>
-            <li><i class="fa fa-li fa-globe"></i><strong><%= t :website %></strong> : www.gilbertotovar.com</li>
-			</ul>
-			<!-- ./some information list -->
+      <ul class="fa-ul">
+        <li><i class="fa fa-li fa-skype"></i><strong>Skype</strong> : nino_gilberto</li>
+        <li><i class="fa fa-li fa-envelope-o"></i><strong>Email</strong> : <%= ENV['USER_EMAIL'] %></li>
+        <li><i class="fa fa-li fa-globe"></i><strong><%= t :university %></strong> : Titulado de la Universidad Autónoma de Nuevo León en el 2012.</li>
+        <li><i class="fa fa-li fa-graduation-cap"></i><strong><%= t :adress %></strong> : Monterrey, Nuevo León.
+      </ul>
+      <!-- ./some information list -->
       <!-- some number facts -->
-			<div class="number-counters text-center new-line">
-				<div class="counters-item">
-					<i class="fa fa-coffee fa-2x"></i>
-					<strong data-to="2150">0</strong>
-					<!-- Set Your Number here. i,e. data-to="56" -->
-					<p>
-                    <%= t :coffe %>
-					</p>
-				</div>
-				<div class="counters-item">
-					<i class="fa fa-flag fa-2x"></i>
-					<strong data-to="3">0</strong>
-					<!-- Set Your Number here. i,e. data-to="56" -->
-					<p>
-                    <%= t :year_experience %>
-					</p>
-				</div>
-                <div class="counters-item">
-                  <i class="fa fa-graduation-cap fa-4x"></i>
-					<p>
-                    <%= t :profession_lti %>
-					</p>
-				</div>
-				<div class="counters-item">
-					<i class="fa fa-thumbs-up fa-2x"></i>
-					<strong data-to="10">0</strong>
-					<!-- Set Your Number here. i,e. data-to="56" -->
-					<p>
-                    <%= t :projects_contributed %>
-					</p>
-				</div>
-			</div>
+      <div class="number-counters text-center new-line">
+        <div class="counters-item">
+          <i class="fa fa-coffee fa-2x"></i>
+          <strong data-to="2150">0</strong>
+          <!-- Set Your Number here. i,e. data-to="56" -->
+          <p>
+          <%= t :coffe %>
+          </p>
+        </div>
+        <div class="counters-item">
+          <i class="fa fa-flag fa-2x"></i>
+          <strong data-to="3">0</strong>
+          <!-- Set Your Number here. i,e. data-to="56" -->
+          <p>
+          <%= t :year_experience %>
+          </p>
+        </div>
+        <div class="counters-item">
+          <i class="fa fa-graduation-cap fa-4x"></i>
+          <p>
+          <%= t :profession_lti %>
+          </p>
+        </div>
+        <div class="counters-item">
+          <i class="fa fa-thumbs-up fa-2x"></i>
+          <strong data-to="10">0</strong>
+          <!-- Set Your Number here. i,e. data-to="56" -->
+          <p>
+          <%= t :projects_contributed %>
+          </p>
+        </div>
+      </div>
       <!-- ./some number facts -->
     </div>
     <div class="col-md-8">
-      <p>
-      <%= t :about_me_4 %>
-      </p>
-      <p>
-      <%= t :about_me_5 %>
-      </p>
-      <p>
-      <h3>Open Source</h3>
-      <%= t :about_me_3 %>
-      </p>
-      <p>
-      <h3>Microsoft</h3>
-      <%= raw t :about_me_7 %>
-      </p>
+      <%= raw t :about_me_4 %>
+
+      <div id="more_about_me">
+        <%= raw t :about_me_5 %>
+        <p>
+        <h3>Open Source</h3>
+        <%= t :about_me_3 %>
+        </p>
+        <p>
+        <h3>Microsoft</h3>
+        <%= raw t :about_me_7 %>
+        </p>
+      </div>
+      <a href="#more_about_me" id="ver_mas", class="btn btn-default" >Leer más</a>
       <p class="text-right">
       <%= image_tag "signature.png", alt: "signature" %>
       </p>
     </div>
 
 
-	</div>
-	<div class="row services">
-		<div class="col-md-3">
-			<!-- Service -->
-			<div class="services-box new-line item_left">
-              <h4><%= t :programmer %></h4>
-				<div class="services-box-icon">
-					<i class="fa fa-smile-o fa-3x"></i>
-				</div>
-				<div class="service-box-info">
-                  <p>
-                  <%= raw t :programmer_box %>
-                  </p>
-				</div>
-			</div>
-			<!-- End Service -->
-		</div>
-		<div class="col-md-3">
-			<!-- Service -->
-			<div class="services-box new-line item_bottom">
-              <h4><%= t :testing %></h4>
-				<div class="services-box-icon">
-					<i class="fa fa-check fa-3x"></i>
-				</div>
-				<div class="service-box-info">
-                  <p>
-                  <%= raw t :testing_box %>
-					</p>
-				</div>
-			</div>
-			<!-- End Service -->
-		</div>
-		<div class="col-md-3">
-			<!-- Service -->
-			<div class="services-box new-line item_bottom">
-              <h4><%= t :deploy %></h4>
-				<div class="services-box-icon">
-					<i class="fa fa-cloud-upload fa-3x"></i>
-				</div>
-				<div class="service-box-info">
-                  <p>
-                  <%= raw t :deployment_box %>
-					</p>
-				</div>
-			</div>
-			<!-- End Service -->
-		</div>
-		<div class="col-md-3 clearfix">
-			<!-- Service -->
-			<div class="services-box new-line item_right">
-              <h4><%= t :web_design %></h4>
-				<div class="services-box-icon">
-					<i class="fa fa-html5 fa-3x"></i>
-				</div>
-				<div class="service-box-info">
-                  <p>
-                  <%= raw t :web_design_box %>
-					</p>
-				</div>
-			</div>
-			<!-- End Service -->
-		</div>
-	</div>                      
+  </div>
+  <div class="row services">
+    <h2>Tareas que puedo realizar</h2>
+    <div class="col-md-3">
+      <!-- Service -->
+      <div class="services-box new-line item_left">
+        <h4><%= t :programmer %></h4>
+        <div class="services-box-icon">
+          <i class="fa fa-smile-o fa-3x"></i>
+        </div>
+        <div class="service-box-info">
+          <p>
+          <%= raw t :programmer_box %>
+          </p>
+        </div>
+      </div>
+      <!-- End Service -->
+    </div>
+    <div class="col-md-3">
+      <!-- Service -->
+      <div class="services-box new-line item_bottom">
+        <h4><%= t :testing %></h4>
+        <div class="services-box-icon">
+          <i class="fa fa-check fa-3x"></i>
+        </div>
+        <div class="service-box-info">
+          <p>
+          <%= raw t :testing_box %>
+          </p>
+        </div>
+      </div>
+      <!-- End Service -->
+    </div>
+    <div class="col-md-3">
+      <!-- Service -->
+      <div class="services-box new-line item_bottom">
+        <h4><%= t :deploy %></h4>
+        <div class="services-box-icon">
+          <i class="fa fa-cloud-upload fa-3x"></i>
+        </div>
+        <div class="service-box-info">
+          <p>
+          <%= raw t :deployment_box %>
+          </p>
+        </div>
+      </div>
+      <!-- End Service -->
+    </div>
+    <div class="col-md-3 clearfix">
+      <!-- Service -->
+      <div class="services-box new-line item_right">
+        <h4><%= t :web_design %></h4>
+        <div class="services-box-icon">
+          <i class="fa fa-html5 fa-3x"></i>
+        </div>
+        <div class="service-box-info">
+          <p>
+          <%= raw t :web_design_box %>
+          </p>
+        </div>
+      </div>
+      <!-- End Service -->
+    </div>
+  </div>                      
 </div>
 </section>
 <!-- End About Section -->
+<%= content_for :javascript_code do %>
+  <script>
+    $(document).ready(function() {
+      $('#more_about_me').hide();
+      $('#ver_mas').click(function() {
+        $('#more_about_me').toggle();
+        if ($('#more_about_me').is(':visible')) {
+          $('#ver_mas').text('Leer Menos');
+          } else {
+          $('#ver_mas').text('Leer más');
+        }
+        return false;
+      });
+
+      $('#skill_id_4').click(function(){
+        $('#transition_id').css('background-color','salmon');
+      });
+
+    });
+  </script>
+<% end %>
