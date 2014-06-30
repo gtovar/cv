@@ -1,0 +1,15 @@
+es:
+  agil_process: Metodolgia Agil
+  briefing: Explicación
+  briefing_description: Identificar objetivos y asesorar, el cliente no sabe exactamente qué es lo que necesita o qué es lo que puede hacer
+  mockups: Prototipos
+  mockups_description: Es hora de hacer prototipos de la idea, que nos sirvirán para mostrar al cliente en la próxima reunión.
+  discussion: Debate
+  discussion_description: Comentar prototipos, no hacemos estimaciones y no tenemos fechas limites.
+  development: Desarrollo
+  development_description: Desarrollo de la aplicación, donde intervienen programadores y diseñadores.
+  testing: Pruebas
+  testing_description: Pruebas con usuarios reales para ver si todo funciona, para modificar la app.
+  delivery: Lazamiento
+  delivery_description: Puede ser un lazamiento por semana.
+

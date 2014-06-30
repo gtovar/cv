@@ -7,7 +7,7 @@
 		<div>
 			<span class="fa fa-cogs fa-2x"></span>
 		</div>
-		<h1 class="white">My <span>Process</span></h1>
+        <h1 class="white"><span><%= t :agil_process %></span></h1>
 	</div>
 	<!-- End Section title -->
  
@@ -16,8 +16,8 @@
 							<div class="process-node active">
 								<i class="fa fa-comments"></i>
 							</div>
-							<h4>Discussion</h4>
-							<p>Lorem Ipsum lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                            <h4><%= t :briefing %></h4>
+                            <p><%= t :briefing_description %></p>
 							<div class="line">
 							  <div class="progress"></div>
 							</div>
@@ -26,18 +26,18 @@
 							<div class="process-node active">
 								<i class="fa fa-lightbulb-o"></i>
 							</div>
-							<h4>Idea</h4>
-							<p>Lorem Ipsum lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                            <h4><%= t :mockups %></h4>
+                            <p><%= t :mockups_description %></p>
 							<div class="line">
 								<div class="progress"></div>
 							</div>
 						</li>
 						<li class="active">
 							<div class="process-node active">
-								<i class="fa fa-desktop"></i>
+								<i class="fa fa-thumbs-o-up"></i>
 							</div>
-							<h4>Implementation</h4>
-							<p>Lorem Ipsum lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                            <h4><%= t :discussion %></h4>
+                            <p><%= t :discussion_description %></p>
 							<div class="line">
 								<div class="progress"></div>
 							</div>
@@ -46,18 +46,28 @@
 							<div class="process-node active">
 								<i class="fa fa-flash"></i>
 							</div>
-							<h4>Review</h4>
-							<p>Lorem Ipsum lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                            <h4><i class="fa fa-refresh"></i>&nbsp<%= t :development %></h4>
+                            <p><%= t :development_description %></p>
 							<div class="line">
 								<div class="progress"></div>
 							</div>
 						</li>
 						<li class="active">
 							<div class="process-node active">
+								<i class="fa fa-check-square-o"></i>
+							</div>
+                            <h4><i class="fa fa-refresh"></i>&nbsp<%= t :testing %></h4>
+                            <p><%= t :testing_description %></p>
+							<div class="line">
+                              	<div class="progress"></div>
+							</div>
+						</li>
+						<li class="active">
+							<div class="process-node active">
 								<i class="fa fa-rocket"></i>
 							</div>
-							<h4>Deliver</h4>
-							<p>Lorem Ipsum lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+                            <h4><%= t :delivery %></h4>
+                            <p><%= t :delivery_description %></p>
 						</li>
 					</ol>
  </div>
