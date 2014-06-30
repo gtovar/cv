@@ -10,6 +10,9 @@ class ProyectsController < ApplicationController
   # GET /proyects/1
   # GET /proyects/1.json
   def show
+    if request.path != proyect_path(@proyect)
+      return redirect_to @proyect, :status => :moved_permanently
+    end
   end
 
   # GET /proyects/new
