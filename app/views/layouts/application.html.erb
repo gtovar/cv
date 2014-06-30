@@ -29,5 +29,6 @@
     <%= javascript_include_tag "application" %>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
     <%= javascript_include_tag "gmap-settings","script"  %>
+    <%= yield :javascript_code %>
   </body>
 </html>

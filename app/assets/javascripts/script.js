@@ -243,7 +243,7 @@ var mySwiper = new Swiper('.swiper-testimonial', {
     mode: 'horizontal',
     loop: true,
     speed: 400,
-    autoplay: 5000,
+    autoplay: 20000,
     autoResize: true,
     pagination: '.pagination-testimonial',
     paginationClickable: true
