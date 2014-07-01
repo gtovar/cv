@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  include ActionView::Helpers::TextHelper 
   def home
     @proyects = Proyect.all
     unless params.blank? 
@@ -13,17 +14,13 @@ class StaticPagesController < ApplicationController
 
           from = "+16096442390" # Your Twilio number
 
-          friends = {
-            "+5218113129230" => "Gilberto",
-          }
-          friends.each do |key, value|
+          friends =  "+5218113129230"
             client.account.messages.create(
               :from => from,
-              :to => key,
+              :to => friends,
               :body => "Tienes un email de #{params["name"]} y dice, #{truncate(params["message"], length: 100)}"
             ) 
-            puts "\n\n Sent message to #{value}"
-          end
+            puts "\n\n Sent message to #{friends}"
         rescue Twilio::REST::RequestError => e
           puts e.message
         end
