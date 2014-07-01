@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
   include ActionView::Helpers::TextHelper 
   def home
-    @proyects = Proyect.all
     unless params.blank? 
       c = ContactForm.new(:name => params["name"],:email => params["email"], :message => params["message"])
       if c.deliver

@@ -21,8 +21,8 @@
         <%= f.text_field :category, class: "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.label :position %><br>
-        <%= f.text_field :position, class: "form-control" %>
+        <%= f.label :position %>
+        <%= f.text_field :position, class: "form-control", placeholder: "Developer, Diseñador, Project Managanment" %>
       </div>
       <div class="form-group">
         <%= f.label :cover %><br>
@@ -47,24 +47,27 @@
   </div>
   <div class="col-xs-8">
       <div class="form-group">
-        <%= f.label :activity_description %>
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control", cols: 20, rows: 10 %>
+      </div>
+    <div class="form-group">
+      <%= f.label :activity_description %><br/>
+        <code>&lt;no lleva html y describe cada una de las actividades que estan en html list&gt;</code> 
         <%= f.text_area :activity_description, class: "form-control", cols: 20, rows: 10 %>
       </div>
       <div class="form-group">
-        <%= f.label :activities %><br>
+        <%= f.label :activities %><br/>
+        <code>&lt;lista de actividades en HTML ul li -  ver github&gt;</code>
         <%= f.text_area :activities, class: "form-control", cols: 20, rows: 10 %>
       </div>
       <div class="form-group">
-        <%= f.label :outstaning %>
+        <%= f.label t :outstanding %>
         <%= f.text_area :outstaning, class: "form-control", cols: 20, rows: 10 %>
       </div>
       <div class="form-group">
         <%= f.label :tools %><br>
+        <code> HTML ul li - ver README github </code>
         <%= f.text_area :tools, class: "form-control", cols: 20, rows: 10 %>
-      </div>
-      <div class="form-group">
-        <%= f.label :description %>
-        <%= f.text_area :description, class: "form-control", cols: 20, rows: 10 %>
       </div>
       <div class="actions">
         <%= f.submit class: "btn btn-primary" %>

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  before_action :set_locale
+  before_action :set_locale, :load_proyects
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -13,4 +13,11 @@ class ApplicationController < ActionController::Base
       { locale: I18n.locale }
   end
 
+  private
+
+  def load_proyects
+    @proyects = Proyect.all
+  end
+
 end
+

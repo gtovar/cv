@@ -7,7 +7,7 @@ class CreateProyects < ActiveRecord::Migration
       t.string :position
       t.text :activities
       t.text :outstaning
-      t.string :tools
+      t.text :tools
       t.text :description
       t.string :cover
       t.text :activity_description
