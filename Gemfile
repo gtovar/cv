@@ -55,3 +55,5 @@ group :test, :development do
   gem "xray-rails"
 end
 gem 'devise'
+gem 'mail_form'
+gem 'twilio-ruby'

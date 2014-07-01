@@ -30,22 +30,21 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="form-respond text-center">
       </div>
-      <form method="post" name="contactform" id="contactform" class="form validate item_bottom" role="form">
+      <%= form_tag(root_path, :method => "get", :multipart => false, class: "form validate item_bottom", style: "opacity: 1; bottom: 0px;" ) do %>
         <div class="form-group">
-          <input type="text" name="name" id="name" class="form-control required" placeholder="Name">
+          <%= text_field_tag "name", nil, :id=>"name", class: "form-control", :placeholder => "Tu nombre" %>
         </div>
         <div class="form-group">
-          <input type="email" name="email" id="email" class="form-control required email" placeholder="Email"><p><%= t :email_spam %></p>
+          <%= text_field_tag "email", nil, :id=>"email", class: "form-control required email", :placeholder => "Tu correo" %>
+          <p><%= t :email_spam %></p>
         </div>
         <div class="form-group">
-          <textarea name="message" id="message" class="form-control input-lg required" rows="9" placeholder="Enter Message"></textarea>
+          <%= text_area_tag "message", nil, :id => "message", class: "form-control input-lg required", :placeholder => "Tus dudas o comentarios, etc.", :rows => "9" %>
         </div>
         <div class="form-group text-center">
-          <input type="submit" id="contactForm_submit" class="btn btn-trans btn-border btn-full" value="Submit">
+          <%= submit_tag "Enviar", id: "contactForm_submit", class: "btn btn-trans btn-border btn-full" %>
         </div>
-        <!-- antispam code -->
-        <div class="antispam"><input type="text" value="" name="url" /></div>
-      </form>
+      <% end %>
     </div>
   </div>
   <!-- End form contact -->
