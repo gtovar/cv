@@ -22,10 +22,9 @@ class StaticPagesController < ApplicationController
             ) 
             puts "\n\n Sent message to #{friends}"
         rescue Twilio::REST::RequestError => e
-          puts e.message
+          puts "#{e.message} ERROR"
         end
 
-        redirect_to root_path
       end
     end
   end
