@@ -1,43 +1,23 @@
-<h1>Listing proyects</h1>
+<div class="page-header">
+  <h1>Listing proyects
+  <%= link_to 'New Proyect', new_proyect_path, class: "btn btn-info", role:"button" %>
+</h1>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Start time</th>
-      <th>End time</th>
-      <th>Position</th>
-      <th>Activities</th>
-      <th>Outstaning</th>
-      <th>Tools</th>
-      <th>Description</th>
-      <th>Cover</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @proyects.each do |proyect| %>
-      <tr>
-        <td><%= proyect.name %></td>
-        <td><%= proyect.start_time %></td>
-        <td><%= proyect.end_time %></td>
-        <td><%= proyect.position %></td>
-        <td><%= proyect.activities %></td>
-        <td><%= proyect.outstaning %></td>
-        <td><%= proyect.tools %></td>
-        <td><%= proyect.description %></td>
-        <td><%= proyect.cover %></td>
-        <td><%= link_to 'Show', proyect %></td>
-        <td><%= link_to 'Edit', edit_proyect_path(proyect) %></td>
-        <td><%= link_to 'Destroy', proyect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Proyect', new_proyect_path %>
+  <div class="row">
+<% @proyects.each do |proyect| %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(proyect.cover_url(:thumb), :alt => "image") if proyect.cover_url.present?  %>
+        <div class="caption">
+          <h3><%= proyect.name %></h3>
+          <p><%= truncate(proyect.description, length: 250) %></p>
+          <p><%= link_to 'Show', proyect, class: "btn btn-success", role: "button" %>
+          <%= link_to 'Edit', edit_proyect_path(proyect), class: "btn btn-primary", role:"button" %>
+          <%= link_to 'Destroy', proyect, class: "btn btn-danger", role: "button", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        </div>
+      </div>
+    </div>
+<% end %>
+  </div>
+<%= link_to 'New Proyect', new_proyect_path, class: "btn btn-info", role:"button" %>
