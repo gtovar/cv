@@ -56,7 +56,7 @@
 
         <% if @experiences.each do |experience| %>
 
-          <%  experience.proyects.each do |proyect| %>
+          <% experience.proyects.each do |proyect| %>
 
             <article class="design photo">
             <%= link_to [experience,proyect] do %>
@@ -69,10 +69,11 @@
                 </div>
               </div>
               <!-- End .overlay -->
-              </article>
-
             <% end %>
+            </article>
+
           <% end %>
+
           <% end.empty? %>
           <h1> No portafolio </h1> 
         <% end %>
