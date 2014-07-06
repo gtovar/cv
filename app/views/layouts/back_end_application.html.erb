@@ -10,8 +10,14 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class=<%= cp(proyects_path) %> >
-            <%= link_to proyects_path do %>
+            <li class=<%= cp(experiences_path) %> >
+            <%= link_to experiences_path do %>
+              <span class="badge pull-right"><%= @experiences.count %></span>
+              Empleos
+            <% end %>
+            </li>
+            <li > 
+            <%= link_to experiences_path do %>
               <span class="badge pull-right"><%= @proyects.count %></span>
               Proyectos
             <% end %>

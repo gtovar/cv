@@ -1,4 +1,5 @@
 class Proyect < ActiveRecord::Base
+  belongs_to :experience
   extend FriendlyId
   friendly_id :name, use: [:slugged,:history]
 

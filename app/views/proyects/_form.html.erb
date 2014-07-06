@@ -1,5 +1,5 @@
 <div class="row">
-    <%= form_for @proyect, :html => { class: "edit_post", id: "edit_post_45" } do |f| %>
+    <%= form_for [@experience,@proyect], :html => { class: "edit_post", id: "edit_post_45" } do |f| %>
       <% if @proyect.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@proyect.errors.count, "error") %> prohibited this proyect from being saved:</h2>

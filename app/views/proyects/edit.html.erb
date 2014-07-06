@@ -5,8 +5,8 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @proyect, class: "btn btn-primary btn-lg active",  role: "button"  %> |
-<%= link_to 'Back', proyects_path, class: "btn btn-default btn-lg active",  role: "button"  %>
+<%= link_to 'Show', [@experience,@proyect], class: "btn btn-primary btn-lg active",  role: "button"  %> |
+<%= link_to 'Back', experience_proyects_path(@experience), class: "btn btn-default btn-lg active",  role: "button"  %>
 </div>
 </div>
 </section>

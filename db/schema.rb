@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140705215229) do
+ActiveRecord::Schema.define(version: 20140706064436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,10 @@ ActiveRecord::Schema.define(version: 20140705215229) do
     t.date     "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
+
+  add_index "experiences", ["slug"], name: "index_experiences_on_slug", unique: true, using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
@@ -71,6 +74,7 @@ ActiveRecord::Schema.define(version: 20140705215229) do
     t.string   "link"
     t.string   "logo"
     t.string   "slug"
+    t.integer  "experience_id"
   end
 
   add_index "proyects", ["slug"], name: "index_proyects_on_slug", unique: true, using: :btree

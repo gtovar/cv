@@ -15,6 +15,28 @@
 		<ul class="timeline list-unstyled">
 			<!-- History Year -->
       <li class="title"><%= t :present %></li>
+
+      <% @experiences.each do |experience| %>
+        <li class="note item_right">
+        <h4><%= experience.name %></h4>
+        <h5><%= t :developer %></h5>
+        <p class="desc">
+        <%= experience.description %><br>
+        <h5><%= t :proyects %></h5>
+        <% experience.proyects.each do |proyect| %>
+            <%= link_to [experience,proyect] do %>
+              <span class="badge"><%= proyect.name %></span>
+            <% end %>
+        <% end %>
+        </p>
+        <span class="date">
+          <%= l experience.start_date, format: :short %> - <%= l experience.end_date, format: :short %><br>
+          <%= distance_of_time_in_words(experience.start_date, experience.end_date) %> 
+        </span>
+        <span class="arrow fa fa-play"></span>
+        </li>
+      <% end %>
+
 			<li class="note item_right">
 			<h4>Incaztech S. de R.L.</h4>
       <h5><%= t :developer %></h5>

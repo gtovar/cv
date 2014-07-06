@@ -1,19 +1,22 @@
 class ProyectsController < ApplicationController
   before_action :set_proyect, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: :show
+  before_action :find_the_experience
   layout "back_end_application", except: :show
+
   # GET /proyects
   # GET /proyects.json
   def index
-    @proyects = Proyect.all
+    @proyects = @experience.proyects
   end
 
   # GET /proyects/1
   # GET /proyects/1.json
   def show
-    if request.path != proyect_path(@proyect)
-      return redirect_to @proyect, :status => :moved_permanently
-    end
+   # if request.path != experience_proyect_path(@proyect)
+   #   return redirect_to @proyect, :status => :moved_permanently
+   # end
+
   end
 
   # GET /proyects/new
@@ -28,11 +31,11 @@ class ProyectsController < ApplicationController
   # POST /proyects
   # POST /proyects.json
   def create
-    @proyect = Proyect.new(proyect_params)
+    @proyect = @experience.proyects.build(proyect_params)
 
     respond_to do |format|
       if @proyect.save
-        format.html { redirect_to @proyect, notice: 'Proyect was successfully created.' }
+        format.html { redirect_to [@experience,@proyect], notice: 'Proyect was successfully created.' }
         format.json { render action: 'show', status: :created, location: @proyect }
       else
         format.html { render action: 'new' }
@@ -46,7 +49,7 @@ class ProyectsController < ApplicationController
   def update
     respond_to do |format|
       if @proyect.update(proyect_params)
-        format.html { redirect_to @proyect, notice: 'Proyect was successfully updated.' }
+        format.html { redirect_to [@experience,@proyect], notice: 'Proyect was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -73,6 +76,10 @@ class ProyectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def proyect_params
-      params.require(:proyect).permit(:name, :start_time, :end_time, :position, :activities, :outstaning, :tools, :description, :cover,:link,:logo,:activity_description, :category)
+      params.require(:proyect).permit(:name, :start_time, :end_time, :position, :activities, :outstaning, :tools, :description, :cover,:link,:logo,:activity_description, :category, :experience_id)
+    end
+
+    def find_the_experience
+      @experience = Experience.friendly.find(params[:experience_id])
     end
 end

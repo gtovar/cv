@@ -1,6 +1,7 @@
 <div class="page-header">
   <h1>Listing proyects
-  <%= link_to 'New Proyect', new_proyect_path, class: "btn btn-info", role:"button" %>
+  <%= link_to 'New Proyect', new_experience_proyect_path, class: "btn btn-info", role:"button" %>
+<%= link_to 'Experiences', experiences_path, class: "btn btn-info", role:"button" %>
 </h1>
 </div>
 
@@ -12,12 +13,13 @@
         <div class="caption">
           <h3><%= proyect.name %></h3>
           <p><%= truncate(proyect.description, length: 250) %></p>
-          <p><%= link_to 'Show', proyect, class: "btn btn-success", role: "button" %>
-          <%= link_to 'Edit', edit_proyect_path(proyect), class: "btn btn-primary", role:"button" %>
-          <%= link_to 'Destroy', proyect, class: "btn btn-danger", role: "button", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+          <p><%= link_to 'Show', [@experience,proyect], class: "btn btn-success", role: "button" %>
+          <%= link_to 'Edit', edit_experience_proyect_path(@experience,proyect), class: "btn btn-primary", role:"button" %>
+          <%= link_to 'Destroy',[@experience,proyect], class: "btn btn-danger", role: "button", method: :delete, data: { confirm: 'Are you sure?' } %></p>
         </div>
       </div>
     </div>
 <% end %>
   </div>
-<%= link_to 'New Proyect', new_proyect_path, class: "btn btn-info", role:"button" %>
+<%= link_to 'New Proyect', new_experience_proyect_path, class: "btn btn-info", role:"button" %>
+<%= link_to 'Experiences', experiences_path, class: "btn btn-info", role:"button" %>
