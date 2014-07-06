@@ -21,7 +21,7 @@
         <h4><%= experience.name %></h4>
         <h5><%= t :developer %></h5>
         <p class="desc">
-        <%= experience.description %><br>
+        <%= raw experience.description %><br>
         <h5><%= t :proyects unless experience.proyects.empty? %></h5>
         <% experience.proyects.each do |proyect| %>
           <%= link_to [experience,proyect] do %>
