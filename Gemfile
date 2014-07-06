@@ -53,7 +53,20 @@ group :test, :development do
   gem "rspec-rails"
   gem "pry-rails"
   gem "xray-rails"
+  gem 'factory_girl_rails'
+  gem "guard-rspec"
 end
+
+group :test do
+  gem 'capybara'
+  gem 'faker'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'poltergeist'
+  gem 'selenium-webdriver', "~> 2.39.0"
+
+end
+
 gem 'devise'
 gem 'mail_form'
 gem 'twilio-ruby'

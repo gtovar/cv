@@ -1,5 +1,7 @@
 Gilbertotovar::Application.routes.draw do
 
+  resources :experiences
+
   devise_for :users
   scope "(:locale)", locale: /en|es/ do
     root to: 'static_pages#home'
