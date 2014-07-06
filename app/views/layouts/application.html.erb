@@ -3,27 +3,18 @@
   <head>
     <title>C.V. | Gilberto Tovar</title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-    <%= csrf_meta_tags %>
     <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"/>
-    <meta name="description" content="Responsive One Page Vcard Portfolio or Resume Template"/>
-    <meta name="author" content="Gilberto Tovar">
+    <%= yield :seo_tags %> 
+    <%= csrf_meta_tags %>
     <!-- Google Font -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,400italic,600italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
-
-
   </head>
   <body data-spy="scroll" data-target=".navbar">
     <div class="mask">
       <div id="intro-loader">
       </div>
     </div>
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
     <%= yield %>
     <%= render "shared/footer" %>
     <%= javascript_include_tag "application" %>
