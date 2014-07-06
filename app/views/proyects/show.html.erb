@@ -116,7 +116,7 @@
 
 
 <% content_for :seo_tags do %>
-  <meta property="og:title" content="<%= #{C.V. | Gilberto Tovar}/#{@proyect.name}" %>" />
+  <meta property="og:title" content="<%= "C.V. | Gilberto Tovar/#{@proyect.name}" %>" />
   <meta property="og:url" content="<%= request.original_url %>" />
   <meta property="og:description" content="<%= @proyect.description %>" />
   <meta property="og:image" content="<%= image_tag(@proyect.cover_url(:slide) , class: "img-responsive", alt: "@proyect.name") if @proyect.cover?%>" />
