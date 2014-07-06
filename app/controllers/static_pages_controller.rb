@@ -1,6 +1,9 @@
 class StaticPagesController < ApplicationController
+
   include ActionView::Helpers::TextHelper 
+
   def home
+    @url_resume = download_resume
     unless params.blank? 
       c = ContactForm.new(:name => params["name"],:email => params["email"], :message => params["message"])
       if c.deliver
@@ -27,4 +30,18 @@ class StaticPagesController < ApplicationController
       end
     end
   end
+
+private
+
+  def download_resume
+    s3 = AWS::S3.new(
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    )
+    object = s3.buckets['gilbertotovar'].objects['cvonline/cv.docx']
+    object.url_for(:get, { :expires => 20.minutes.from_now, :secure => true }).to_s
+  end
+
+
+
 end

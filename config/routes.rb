@@ -7,6 +7,7 @@ Gilbertotovar::Application.routes.draw do
     resources :experiences, :path => 'empresas' do
       resources :proyects, :path => 'proyectos'
     end
+    get 'downloads' => 'static_pages#download_resume', as: 'download'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

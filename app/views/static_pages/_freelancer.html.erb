@@ -2,7 +2,10 @@
 	<div class="container">
 		<div class="col-md-12 text-center item_bottom">
       <h1 class="white padBottom killMargin"><%= t :free_lancer_description %>&nbsp<strong><%= t :job_want %></strong></h1>
-      <a href="#contact" class="scroll btn btn-trans btn-border-w btn-large"><%= t :hire_me %></a>&nbsp;&nbsp;<a class="btn btn-primary btn-lg" href="#"><i class="fa fa-download"></i><%= t :download_resume %></a>
+      <a href="#contact" class="scroll btn btn-trans btn-border-w btn-large"><%= t :hire_me %></a>&nbsp;&nbsp;
+      <%= link_to @url_resume, :class => "btn btn-primary btn-lg" do %>
+        <i class="fa fa-download"></i><%= t :download_resume %></a>
+    <% end %>
 		</div>
 	</div>
 </div>

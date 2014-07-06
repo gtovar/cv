@@ -70,3 +70,4 @@ end
 gem 'devise'
 gem 'mail_form'
 gem 'twilio-ruby'
+gem 'aws-sdk'
