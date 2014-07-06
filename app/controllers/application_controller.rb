@@ -17,9 +17,7 @@ class ApplicationController < ActionController::Base
 
   def load_dashboard
       @proyects = Proyect.all
-    if user_signed_in?
       @experiences = Experience.all
-    end
   end
 
 end
