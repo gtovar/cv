@@ -24,9 +24,9 @@
         <%= experience.description %><br>
         <h5><%= t :proyects %></h5>
         <% experience.proyects.each do |proyect| %>
-            <%= link_to [experience,proyect] do %>
-              <span class="badge"><%= proyect.name %></span>
-            <% end %>
+          <%= link_to [experience,proyect] do %>
+            <span class="badge"><%= proyect.name %></span>
+          <% end %>
         <% end %>
         </p>
         <span class="date">
@@ -37,49 +37,6 @@
         </li>
       <% end %>
 
-			<li class="note item_right">
-			<h4>Incaztech S. de R.L.</h4>
-      <h5><%= t :developer %></h5>
-      <p class="desc">
-      <%= t :incaztech_description %>
-			</p>
-			<span class="date">
-        <%= t :incaztech_date %>
-      </span>
-			<span class="arrow fa fa-play"></span>
-			</li>
-			<li class="note item_left">
-			<h4>ADEPSA S.A. de C.V.</h4>
-      <h5><%= t :developer %></h5>
-      <p class="desc">
-      <%= t :adepsa_description %>
-			</p>
-      <span class="date">
-        <%= t :adepsa_date %>
-			</span>
-			<span class="arrow fa fa-play"></span>
-			</li>
-			<li class="note item_right">
-			<h4>Grupo Finaciero Banorte</h4>
-      <h5><%= t :operator %></h5>
-      <p class="desc">
-      <%= t :banortel_description %>
-			</p>
-      <span class="date">
-        <%= t :banortel_date %>
-			 </span>
-			<span class="arrow fa fa-play"></span>
-			</li>
-			<li class="note item_left">
-			<h4>American on line</h4>
-      <h5><%= t :operator %></h5>
-      <p class="desc">
-      <%= t :aol_description %>
-			</p>
-			<span class="date">
-        <%= t :aol_date %> </span>
-			<span class="arrow fa fa-play"></span>
-      </li>
 
 			<!-- Education -->
       <li class="title"><%= t :education %></li>
