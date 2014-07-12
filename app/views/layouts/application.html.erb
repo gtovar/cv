@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>C.V. | Gilberto Tovar</title>
+    <title>
+      <%= content_for?(:title) ? yield(:title) : "C.V. | Gilberto Tovar" %>
+    </title>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <meta name="viewport" content="target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no"/>
     <meta name="author" content="Gilberto Tovar">
