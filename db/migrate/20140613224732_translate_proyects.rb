@@ -1,4 +1,4 @@
-class TranslateProyects < ActiveRecord::Migration
+class TranslateProyects < ActiveRecord::Migration[5.0]
   def self.up
     Proyect.create_translation_table!({
       :position => :string,

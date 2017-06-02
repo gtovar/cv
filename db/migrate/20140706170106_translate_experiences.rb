@@ -1,4 +1,4 @@
-class TranslateExperiences < ActiveRecord::Migration
+class TranslateExperiences < ActiveRecord::Migration[5.0]
 
   def self.up
     Experience.create_translation_table!({
