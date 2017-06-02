@@ -33,7 +33,7 @@ es:
     formats:
       default: ! '%d/%m/%Y'
       long: ! '%d de %B de %Y'
-      short: ! '%d de %b'
+      short: ! '%B de %Y'
     month_names:
     -
     - enero
@@ -279,6 +279,13 @@ es:
   some_tools: Algunas herramientas
   english_skill: English - TOEFL 450 pts. en el 2004
   contact: Contacto
+  activities: Actividades
+  description: Descripción
+  edit: Editar
+  listing_proyects: Listado de Proyectos
+  new_proyect: Nuevo Proyecto
+  new_experience: Nueva experiencia
+  listing_experiences: Listado de experiencias
 
 
 

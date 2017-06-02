@@ -30,7 +30,7 @@
         <% end %>
         </p>
         <span class="date">
-          <%= l experience.start_date, format: :long %> - <%= l experience.end_date, format: :long %><br>
+          <%= l experience.start_date, format: :short %> - <%= l experience.end_date, format: :short %><br>
           <%= distance_of_time_in_words(experience.start_date, experience.end_date) %> 
         </span>
         <span class="arrow fa fa-play"></span>

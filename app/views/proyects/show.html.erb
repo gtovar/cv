@@ -1,3 +1,4 @@
+<%= title("C.V. | Gilberto Tovar | #{@proyect.name}") %>
 <%= render "navbar" %>
 <section id="proyect" class="slide-content" style="padding-top:100px; color: wheat; position: static; text-align: left;" >
 <div class="single-portfolio">
@@ -113,3 +114,10 @@
 
 <%= link_to 'Edit', edit_experience_proyect_path(@experience,@proyect), class: "btn btn-primary btn-lg active",  role: "button" %> |
 <%= link_to 'Back', experience_proyects_path(@experience), class: "btn btn-defaul btn-lg active",  role: "button"  %>
+
+
+<% content_for :seo_tags do %>
+  <meta property="og:title" content='<%= "C.V. | Gilberto Tovar / #{@proyect.name}" %>' />
+  <meta property="og:description" content="<%= @proyect.description %>" />
+  <meta property="og:image" content='<%= @proyect.cover_url(:thumb) if @proyect.cover?%>' />
+<% end %>

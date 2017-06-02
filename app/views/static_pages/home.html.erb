@@ -1,6 +1,12 @@
 <%= render "shared/navbar" %>
 <!-- Home Section -->
 <section id="home">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
 <%= image_tag "img/loader.gif", alt:"loader", id: "cycle-loader" %>
 <div id="fullscreen-slider">
 	<!-- Slider image 1-->
@@ -40,7 +46,9 @@
 <%= render "static_pages/process" %>
 <%= render "static_pages/contact" %>
 
-
+<% content_for :seo_tags do %>
+  <%= render 'seo_home' %>
+<% end %>
 
 
 
