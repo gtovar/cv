@@ -10,25 +10,23 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require identity/js/modernizr
 //= require jquery
-//= require jquery_ujs
-//= require js/modernizr
-//= require js/jquery.sticky
-//= require js/jquery.easing-1.3.pack
-//= require js/bootstrap.min
-//= require bootstrap-modal
-//= require js/jquery.parallax-1.1.3
-//= require js/jquery.appear
-//= require js/jquery.cycle.all
-//= require js/jquery.flexslider.min
-//= require js/jquery.fitvids
-//= require jquery.maximage
-//= require js/swiper.min
-//= require js/waypoints.min
-//= require js/jquery-countTo
-//= require easyPieChart
-//= require js/smoothscroll
-//= require skrollr
-//= require js/jquery.isotope.min
-//= require js/jquery.nicescroll.min
-//= require js/jquery.validate.min
+//= require identity/js/jquery.sticky
+//= require identity/js/jquery.easing-1.3.pack
+//= require identity/js/bootstrap.min
+//= require identity/js/jquery.parallax-1.1.3
+//= require identity/js/jquery.appear
+//= require identity/js/jquery.flexslider.min
+//= require identity/js/jquery.fitvids
+//= require identity/js/swiper.min
+//= require identity/js/waypoints.min
+//= require identity/js/jquery-countTo
+//= require identity/js/easyPieChart
+//= require identity/js/smoothscroll
+//= require identity/js/jquery.isotope.min
+//= require identity/js/jquery.nicescroll.min
+//= require identity/js/jquery.validate.min
+//= require identity/rs-plugin/js/jquery.themepunch.tools.min
+//= require identity/rs-plugin/js/jquery.themepunch.revolution.min
+//= require identity/js/script

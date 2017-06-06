@@ -1,39 +1,47 @@
 <%= render "shared/navbar" %>
+<% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 <!-- Home Section -->
 <section id="home">
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-<%= image_tag "img/loader.gif", alt:"loader", id: "cycle-loader" %>
-<div id="fullscreen-slider">
-	<!-- Slider image 1-->
-    <div class="slider-item">
-      <%= image_tag "slide0.jpg", alt: "Lic. Gilberto Tovar Picture Profile" %>
-	</div>
-	<!-- End Slider image 1-->
-	<!-- Slider image 2-->
-	<div class="slider-item">
-      <%= image_tag "slide2.jpg", alt: "Lic. Gilberto Tovar Picture Profile" %>
-	</div>
-	<!-- End Slider image 2-->
-</div>
-<div class="slide-content">
-	<div class="text-center">
-		<div class="header">
-          <div class="heading">
-            <%= t :about_me_1 %>
-			</div>
-			<div class="box-heading">
-				<div class="box-inner">
-					Gilberto Tovar
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <div id="tp-banner-container">
+        <!-- Slider image 1-->
+        <div class="tp-banner">
+            <ul>
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on"  data-title="Slide 1">
+                    <%= image_tag "slide0.jpg", alt: "Lic. Gilberto Tovar Picture Profile",:data => {bgposition: "center top", bgfit: "cover", bgrepeat: "no-repeat"} %>
+
+                    <div class="tp-caption tp-resizeme sft sub-heading" data-x="center" data-hoffset="0" data-y="center" data-voffset="-50" data-speed="300" data-start="1200" data-easing="Power1.easeInOut" data-endeasing="Power1.easeInOut" data-captionhidden="off" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;"><%= t :about_me_1 %>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption box-title sfb tp-fade tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="30" data-speed="300" data-start="1300" data-easing="Power1.easeInOut" data-endeasing="Power1.easeInOut" data-captionhidden="off" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Gilberto Tovar
+                    </div>
+
+                </li>
+
+                <li data-transition="fade" data-slotamount="7" data-masterspeed="600" data-saveperformance="on"  data-title="Slide 2">
+                    <!-- MAIN IMAGE -->
+                    <%= image_tag "slide2.jpg", alt: "Lic. Gilberto Tovar Picture Profile", :data => {bgposition: "center top", bgfit: "cover", bgrepeat: "no-repeat"} %>
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption tp-resizeme sft sub-heading" data-x="center" data-hoffset="0" data-y="center" data-voffset="-50" data-speed="300" data-start="1200" data-easing="Power1.easeInOut" data-endeasing="Power1.easeInOut" data-captionhidden="off" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;"><%= t :about_me_8 %>
+                    </div>
+
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption box-title tp-fade sfb tp-resizeme" data-x="center" data-hoffset="0" data-y="center" data-voffset="30" data-speed="300" data-start="1300" data-easing="Power1.easeInOut" data-endeasing="Power1.easeInOut" data-captionhidden="off" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">Full Stack Developer
+                    </div>
+
+
+                </li>
+
+
+            </ul>
+            <div class="tp-bannertimer"></div>  </div>
+    </div>
 </section>
 <!-- Home Section -->
 
@@ -47,7 +55,7 @@
 <%= render "static_pages/contact" %>
 
 <% content_for :seo_tags do %>
-  <%= render 'seo_home' %>
+    <%= render 'seo_home' %>
 <% end %>
 
 
