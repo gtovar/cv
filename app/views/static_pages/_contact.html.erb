@@ -25,30 +25,74 @@
       <!-- End Social Icon -->
     </div>
   </div>
-  <div class="row item_fade_in">
+  <div class="row item_fade_in" id="contact_form">
     <h4 class="text-center"><%= t :email_description %></h4>
     <div class="col-md-6 col-md-offset-3">
       <div class="form-respond text-center">
       </div>
-      <%= form_tag(root_path, :method => "get", :multipart => false, class: "form validate item_bottom", style: "opacity: 1; bottom: 0px;" ) do %>
-        <div class="form-group">
-          <%= text_field_tag "name", nil, :id=>"name", class: "form-control", :placeholder => "Tu nombre" %>
-        </div>
-        <div class="form-group">
-          <%= text_field_tag "email", nil, :id=>"email", class: "form-control required email", :placeholder => "Tu correo" %>
-          <p><%= t :email_spam %></p>
-        </div>
-        <div class="form-group">
-          <%= text_area_tag "message", nil, :id => "message", class: "form-control input-lg required", :placeholder => "Tus dudas o comentarios, etc.", :rows => "9" %>
-        </div>
-        <div class="form-group text-center">
-          <%= submit_tag "Enviar", id: "contactForm_submit", class: "btn btn-trans btn-border btn-full" %>
-        </div>
-      <% end %>
+      <%= form_tag(send_email_path, method: "post", name: "contactform", id: "contactform", class: "form validate item_bottom", role: "form", remote: true) do %>
+      <div class="form-group">
+          <%= text_field_tag 'name',nil, class: "form-control required", placeholder: "Name" %>
+      </div>
+      <div class="form-group">
+          <%= text_field_tag 'email',nil, type: 'email', class: "form-control required email", placeholder: "Email" %>
+      </div>
+          <div class="form-group">
+              <%= text_area_tag 'message',nil, class: "form-control input-lg required", rows: "9", placeholder: "Enter Message" %>
+          </div>
+          <div class="form-group">
+              <%= recaptcha_tags %>
+          </div>
+          <div class="form-group text-center">
+
+              <%= button_tag(:type=>'submit',  :id=>"contactForm_submit", :class=>"btn btn-trans btn-border btn-full") do %>
+                  Submit
+              <% end %>
+          </div>
+          <% end %>
     </div>
   </div>
   <!-- End form contact -->
 </div>
 </section>
+<%= content_for :javascript_code do %>
+    <script>
+        $(document).on('submit', '#contactform', function(e) {
+             e.preventDefault(); 
+            // Contact Form Request
+            $(".validate").validate();
+            var form = $('#contactform');
+            var submit = $('#contactForm_submit');
+            var alertx = $('.form-respond');
+            // form submit event
+            // sending ajax request through jQuery
+            form.bind('ajax:beforeSend', function(event, xhr, settings) {
+                xhr.setRequestHeader("Accept", "text/html");
+                alertx.fadeOut();
+                submit.html('Sending....'); // change submit button text
+            })
+            .bind('ajax:success', function(event, data, status, xhr) {
+                console.log("Exito");
+                console.log(data);
+                console.log(xhr.setRequestHeader('X-Awesome', 'enabled'));
+                form.fadeOut(300);
+                alertx.html(data).fadeIn(1000); // fade in response data     
+                setTimeout(function() {
+                    alertx.html(data).fadeOut(300);
+                    submit.html('Submit'); // change submit button text
+                    if (window.grecaptcha) grecaptcha.reset();
+                    $('#name, #email, #message').val('')
+                        form.fadeIn(1800);
+                }, 4000);
+            })
+            .bind('ajax:error', function(event, xhr, status, error){
+                console.log('Error');
+                console.log(error);
+                console.log(status);
+                console.log(xhr.setRequestHeader('X-Awesome', 'enabled'));
+            });
+        });
+    </script>
+<% end %>
 <!-- End Contact Section -->
 <!-- Google maps -->

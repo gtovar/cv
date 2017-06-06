@@ -260,3 +260,7 @@ en:
   new_proyect: New Proyect
   listing_experiences: Listing experiences
   new_experience: New Experiences
+  error_sending: Error sending
+  try_again_later: Try again later.
+  email_sent_successfully: Email Sent Successfully
+  your_message_has_been_submitted: Your mesage has been submitted.

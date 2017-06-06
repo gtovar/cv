@@ -1,0 +1,5 @@
+<div class='content-message'> <i class='fa fa-times fa-3x'></i> <h2><%= t :error_sending %></h2> <p><%= t :try_again_later %></p>
+<% c.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+<% end %>
+</div>
