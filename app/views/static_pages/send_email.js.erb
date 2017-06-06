@@ -1,0 +1,10 @@
+<% if @c.errors %>
+    <div class='content-message'> <i class='fa fa-times fa-3x'></i> <h2><%= t :error_sending %></h2> <p><%= t :try_again_later %></p>
+    <% @c.errors.full_messages.each do |error| %>
+        <p><%= error %></p>
+    <% end %>
+</div>
+
+<% else %>
+    <div class='content-message'> <i class='fa fa-rocket fa-3x'></i> <h2><%= t :email_sent_successfully %></h2> <p> <%= t :your_message_has_been_submitted %></p> </div>
+<% end %>

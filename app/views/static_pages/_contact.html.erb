@@ -25,26 +25,28 @@
       <!-- End Social Icon -->
     </div>
   </div>
-  <div class="row item_fade_in">
+  <div class="row item_fade_in" id="contact_form">
     <h4 class="text-center"><%= t :email_description %></h4>
     <div class="col-md-6 col-md-offset-3">
       <div class="form-respond text-center">
       </div>
-      <%= form_tag(root_path, :method => "get", :multipart => false, class: "form validate item_bottom", style: "opacity: 1; bottom: 0px;" ) do %>
-        <div class="form-group">
-          <%= text_field_tag "name", nil, :id=>"name", class: "form-control", :placeholder => "Tu nombre" %>
-        </div>
-        <div class="form-group">
-          <%= text_field_tag "email", nil, :id=>"email", class: "form-control required email", :placeholder => "Tu correo" %>
-          <p><%= t :email_spam %></p>
-        </div>
-        <div class="form-group">
-          <%= text_area_tag "message", nil, :id => "message", class: "form-control input-lg required", :placeholder => "Tus dudas o comentarios, etc.", :rows => "9" %>
-        </div>
-        <div class="form-group text-center">
-          <%= submit_tag "Enviar", id: "contactForm_submit", class: "btn btn-trans btn-border btn-full" %>
-        </div>
-      <% end %>
+      <form method="post" name="contactform" id="contactform" class="form validate item_bottom" role="form">
+          <div class="form-group">
+              <input type="text" name="name" id="name" class="form-control required" placeholder="Name">
+          </div>
+          <div class="form-group">
+              <input type="email" name="email" id="email" class="form-control required email" placeholder="Email">
+          </div>
+          <div class="form-group">
+              <textarea name="message" id="message" class="form-control input-lg required" rows="9" placeholder="Enter Message"></textarea>
+          </div>
+          <div class="form-group">
+              <%= recaptcha_tags %>
+          </div>
+          <div class="form-group text-center">
+              <input type="submit" id="contactForm_submit" class="btn btn-trans btn-border btn-full" value="Submit">
+          </div>
+      </form>
     </div>
   </div>
   <!-- End form contact -->
@@ -52,3 +54,20 @@
 </section>
 <!-- End Contact Section -->
 <!-- Google maps -->
+<%= content_for :javascript_code do %>
+    <script>
+        $(document).ready(function(){
+            $("#contactform").on('ajax:success', function(event, data, status, xhr) {
+                console.log("Great!");
+
+                // use data to access to your json data structure
+            });
+
+            $("#contactform").on('ajax:error', function(event, xhr, status, error) {
+                console.log("sorry mate!");
+            });
+
+            // ....
+        })
+    </script>
+<% end %>

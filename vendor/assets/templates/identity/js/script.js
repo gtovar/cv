@@ -270,7 +270,7 @@ $(document).ready(function() {
         e.preventDefault(); // prevent default form submit
         // sending ajax request through jQuery
         $.ajax({
-            url: 'sendemail.php',
+            url: 'es/send_email',
             type: 'POST',
             dataType: 'html',
             data: form.serialize(),

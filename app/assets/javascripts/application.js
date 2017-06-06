@@ -12,6 +12,7 @@
 //
 //= require identity/js/modernizr
 //= require jquery
+//= require jquery_ujs
 //= require identity/js/jquery.sticky
 //= require identity/js/jquery.easing-1.3.pack
 //= require identity/js/bootstrap.min

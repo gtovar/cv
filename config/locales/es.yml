@@ -190,6 +190,9 @@ es:
       long: ! '%d de %B de %Y %H:%M'
       short: ! '%d de %b %H:%M'
     pm: pm
+  recaptcha:
+    errors:
+      verification_failed: 'Oops, no pudimos validar la respuesta del reCAPTCHA. Porfavor intenta de nuevo.'
   website: Sitio Web
   coffe: Café
   year_experience: Años de Experiencia
@@ -286,6 +289,7 @@ es:
   new_proyect: Nuevo Proyecto
   new_experience: Nueva experiencia
   listing_experiences: Listado de experiencias
-
-
-
+  error_sending: Error al enviar
+  try_again_later: Intente nuevamente.
+  email_sent_successfully: Correo enviado exitosamente!!!
+  your_message_has_been_submitted: Tu mensaje a sido enviado.

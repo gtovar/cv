@@ -73,3 +73,5 @@ gem 'mail_form'
 gem 'twilio-ruby'
 gem 'aws-sdk', '~> 2'
 gem 'newrelic_rpm'
+gem "recaptcha", require: "recaptcha/rails"
+
