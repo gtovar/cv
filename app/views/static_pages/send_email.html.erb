@@ -1,0 +1,5 @@
+<% if @c.errors.count > 0 %>
+    <%= render partial: 'errors_email_response', :locals => {:c => @c} %>
+<% else %>
+    <%= render partial: 'send_email_response', xray: false %>
+<% end %>

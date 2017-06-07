@@ -30,28 +30,69 @@
     <div class="col-md-6 col-md-offset-3">
       <div class="form-respond text-center">
       </div>
-      <form method="post" name="contactform" id="contactform" class="form validate item_bottom" role="form">
+      <%= form_tag(send_email_path, method: "post", name: "contactform", id: "contactform", class: "form validate item_bottom", role: "form", remote: true) do %>
           <div class="form-group">
-              <input type="text" name="name" id="name" class="form-control required" placeholder="Name">
+              <%= text_field_tag 'name',nil, class: "form-control required", placeholder: "Name" %>
           </div>
           <div class="form-group">
-              <input type="email" name="email" id="email" class="form-control required email" placeholder="Email">
+              <%= text_field_tag 'email',nil, type: 'email', class: "form-control required email", placeholder: "Email" %>
           </div>
           <div class="form-group">
-              <textarea name="message" id="message" class="form-control input-lg required" rows="9" placeholder="Enter Message"></textarea>
+              <%= text_area_tag 'message',nil, class: "form-control input-lg required", rows: "9", placeholder: "Enter Message" %>
           </div>
           <div class="form-group">
               <%= recaptcha_tags %>
           </div>
           <div class="form-group text-center">
-              <input type="submit" id="contactForm_submit" class="btn btn-trans btn-border btn-full" value="Submit">
+              <%= button_tag(:type=>'submit',  :id=>"contactForm_submit", :class=>"btn btn-trans btn-border btn-full") do %>
+                  Submit
+              <% end %>
           </div>
-      </form>
+      <% end %>
     </div>
   </div>
   <!-- End form contact -->
 </div>
 </section>
+<%= content_for :javascript_code do %>
+    <script>
+        $(document).on('submit', '#contactform', function(e) {
+             e.preventDefault(); 
+            // Contact Form Request
+            $(".validate").validate();
+            var form = $('#contactform');
+            var submit = $('#contactForm_submit');
+            var alertx = $('.form-respond');
+            // form submit event
+            // sending ajax request through jQuery
+            form.bind('ajax:beforeSend', function(event, xhr, settings) {
+                xhr.setRequestHeader("Accept", "text/html");
+                alertx.fadeOut();
+                submit.html('Sending....'); // change submit button text
+            })
+            .bind('ajax:success', function(event, data, status, xhr) {
+                console.log("Exito");
+                console.log(data);
+                console.log(xhr.setRequestHeader('X-Awesome', 'enabled'));
+                form.fadeOut(300);
+                alertx.html(data).fadeIn(1000); // fade in response data     
+                setTimeout(function() {
+                    alertx.html(data).fadeOut(300);
+                    submit.html('Submit'); // change submit button text
+                    if (window.grecaptcha) grecaptcha.reset();
+                    $('#name, #email, #message').val('')
+                        form.fadeIn(1800);
+                }, 4000);
+            })
+            .bind('ajax:error', function(event, xhr, status, error){
+                console.log('Error');
+                console.log(error);
+                console.log(status);
+                console.log(xhr.setRequestHeader('X-Awesome', 'enabled'));
+            });
+        });
+    </script>
+<% end %>
 <!-- End Contact Section -->
 <!-- Google maps -->
 <%= content_for :javascript_code do %>

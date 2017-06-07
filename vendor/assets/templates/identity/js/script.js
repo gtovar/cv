@@ -260,38 +260,6 @@ $(document).ready(function() {
             }, 2200, "easeOutBounce")
         })
     });
-    // Contact Form Request
-    $(".validate").validate();
-    var form = $('#contactform');
-    var submit = $('#contactForm_submit');
-    var alertx = $('.form-respond');
-    // form submit event
-    $(document).on('submit', '#contactform', function(e) {
-        e.preventDefault(); // prevent default form submit
-        // sending ajax request through jQuery
-        $.ajax({
-            url: 'es/send_email',
-            type: 'POST',
-            dataType: 'html',
-            data: form.serialize(),
-            beforeSend: function() {
-                alertx.fadeOut();
-                submit.html('Sending....'); // change submit button text
-            },
-            success: function(data) {
-                form.fadeOut(300);
-                alertx.html(data).fadeIn(1000); // fade in response data     
-                setTimeout(function() {
-                    alertx.html(data).fadeOut(300);
-                    $('#name, #email, #message').val('')
-                    form.fadeIn(1800);
-                }, 4000);
-            },
-            error: function(e) {
-                console.log(e)
-            }
-        });
-    });
     //Collapse navigation on click (Bootstrap 3 is missing it)
     jQuery('.nav a').on('click', function() {
         jQuery('#my-nav').removeClass('in').addClass('collapse');
