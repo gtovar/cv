@@ -237,6 +237,7 @@ GEM
     formatador (0.2.5)
     friendly_id (5.0.5)
       activerecord (>= 4.0.0)
+    get_process_mem (0.2.1)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     guard (2.14.1)
@@ -306,6 +307,10 @@ GEM
     pry-rails (0.3.6)
       pry (>= 0.10.4)
     public_suffix (2.0.5)
+    puma (3.9.1)
+    puma_worker_killer (0.1.0)
+      get_process_mem (~> 0.2)
+      puma (>= 2.7, < 4)
     rack (2.0.3)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -439,6 +444,8 @@ DEPENDENCIES
   pg
   poltergeist
   pry-rails
+  puma
+  puma_worker_killer
   rails
   recaptcha
   rmagick
