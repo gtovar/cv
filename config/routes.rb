@@ -10,6 +10,10 @@ Gilbertotovar::Application.routes.draw do
     get 'downloads' => 'static_pages#download_resume', as: 'download'
     post 'send_email' => 'static_pages#send_email', as: 'send_email'
   end
+
+  get "#{ENV['LOADER_TOKEN']}/" => 'static_pages#loaderio'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

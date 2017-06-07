@@ -2,6 +2,13 @@ class StaticPagesController < ApplicationController
 
   include ActionView::Helpers::TextHelper 
 
+  def loaderio
+      @loaderio_token = ENV['LOADER_TOKEN']
+      respond_to do |format|
+          format.html {render :layout => false}
+      end
+  end
+  
   def send_email
       unless params["email"].blank? 
           puts "estamos dentro de params.blank #{params.inspect}"
