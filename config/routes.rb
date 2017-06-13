@@ -2,7 +2,7 @@ Gilbertotovar::Application.routes.draw do
 
 
   scope "(:locale)", locale: /en|es/ do
-    devise_for :users
+    devise_for :users,:path => '', :path_names => {:sign_in => 'login',:sign_out => 'logout'}
     root to: 'static_pages#home'
     resources :experiences, :path => 'empresas' do
       resources :proyects, :path => 'proyectos'
