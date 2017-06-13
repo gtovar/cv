@@ -6,7 +6,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences
   # GET /experiences.json
   def index
-    @experiences = Experience.all
+    @experiences = Experience.includes(:translations)
   end
 
   # GET /experiences/1
