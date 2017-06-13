@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
   def load_dashboard
       @proyects = Proyect.includes(:experience,:translations)
-      @experiences = Experience.includes(:proyects,:translations)
+      @experiences = Experience.includes(:proyects,:translations).order(start_date: :desc)
   end
 
 end
