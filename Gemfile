@@ -54,6 +54,10 @@ gem "fog"
 gem "globalize", git: "https://github.com/globalize/globalize"
 gem 'friendly_id', '~> 5.0.0'
 
+group :development do
+    gem 'bullet'
+end
+
 group :test, :development do
   gem "rspec-rails"
   gem "pry-rails"
