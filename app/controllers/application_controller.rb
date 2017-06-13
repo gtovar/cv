@@ -16,8 +16,8 @@ class ApplicationController < ActionController::Base
   private
 
   def load_dashboard
-      @proyects = Proyect.all
-      @experiences = Experience.all
+      @proyects = Proyect.includes(:experience,:translations)
+      @experiences = Experience.includes(:proyects,:translations)
   end
 
 end

@@ -54,12 +54,11 @@
     <div class="col-md-12">
       <div id="portfolio-items" class="portfolio-items item_fade_in">
 
-        <% if @experiences.each do |experience| %>
 
-          <% experience.proyects.each do |proyect| %>
+          <% if @proyects.each do |proyect| %>
 
             <article class="design photo">
-            <%= link_to [experience,proyect] do %>
+            <%= link_to [proyect.experience,proyect] do %>
               <%= image_tag(proyect.cover_url(:thumb), :alt => "image") if proyect.cover_url.present?  %>
               <div class="overlay">
                 <div class="item-info">
@@ -72,7 +71,6 @@
             <% end %>
             </article>
 
-          <% end %>
 
           <% end.empty? %>
           <h1> No portafolio </h1> 
