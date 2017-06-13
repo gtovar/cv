@@ -38,6 +38,12 @@
         <p>
         <%= @proyect.description %>
         </p>
+        <% if user_signed_in? %>
+            <p>
+            <%= link_to 'Edit', edit_experience_proyect_path(@experience,@proyect), class: "btn btn-primary btn-lg active",  role: "button" %> |
+            <%= link_to 'Back', experience_proyects_path(@experience), class: "btn btn-defaul btn-lg active",  role: "button"  %>
+            </p>
+        <% end %>
       </div>   
       <!-- End Project Summary -->
     </div>
@@ -93,7 +99,7 @@
   </div>
 </div>
 </section>
-<section id="tools" class="clients parallax" style="background-image: url(assets/clients.png);background-color: rgba(0, 0, 0, 0.6);">
+<section id="tools" class="clients parallax" style="background-image: url(<%= asset_path "assets/clients.png" %>);background-color: rgba(0, 0, 0, 0.6);">
 <div class="parallax-overlay">
   <div class="container">
     <div class="row">
@@ -112,8 +118,6 @@
 </div>
 </section>
 
-<%= link_to 'Edit', edit_experience_proyect_path(@experience,@proyect), class: "btn btn-primary btn-lg active",  role: "button" %> |
-<%= link_to 'Back', experience_proyects_path(@experience), class: "btn btn-defaul btn-lg active",  role: "button"  %>
 
 
 <% content_for :seo_tags do %>
