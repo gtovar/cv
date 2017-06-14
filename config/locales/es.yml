@@ -293,3 +293,13 @@ es:
   try_again_later: Intente nuevamente.
   email_sent_successfully: Correo enviado exitosamente!!!
   your_message_has_been_submitted: Tu mensaje a sido enviado.
+  pundit:
+      default: No puedes realizar esta acción.
+      proyect_policy:
+        update?: Tu no puedes actualizar mis proyectos.
+        show?: Tu no puedes ver mis proyectos.
+        edit?: Tu no puedes editar mis proyectos.
+      experience_policy:
+        update?: Tu no puedes actualizar mis empleos.
+        show?: Tu no puedes ver mis empleos.
+        edit?: Tu no puedes editar mis empleos.

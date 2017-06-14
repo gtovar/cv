@@ -85,3 +85,5 @@ gem 'newrelic_rpm'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'bundler'
 gem 'scout_apm'
+gem "pundit"
+

@@ -8,6 +8,7 @@ class ProyectsController < ApplicationController
   # GET /proyects.json
   def index
     @proyects = @experience.proyects
+    authorize Proyect
   end
 
   # GET /proyects/1
@@ -16,16 +17,17 @@ class ProyectsController < ApplicationController
    # if request.path != experience_proyect_path(@proyect)
    #   return redirect_to @proyect, :status => :moved_permanently
    # end
-
   end
 
   # GET /proyects/new
   def new
     @proyect = Proyect.new
+    authorize Proyect
   end
 
   # GET /proyects/1/edit
   def edit
+    authorize Proyect
   end
 
   # POST /proyects
@@ -42,6 +44,7 @@ class ProyectsController < ApplicationController
         format.json { render json: @proyect.errors, status: :unprocessable_entity }
       end
     end
+    authorize Proyect
   end
 
   # PATCH/PUT /proyects/1
@@ -56,6 +59,7 @@ class ProyectsController < ApplicationController
         format.json { render json: @proyect.errors, status: :unprocessable_entity }
       end
     end
+    authorize Proyect
   end
 
   # DELETE /proyects/1
@@ -66,6 +70,7 @@ class ProyectsController < ApplicationController
       format.html { redirect_to proyects_url }
       format.json { head :no_content }
     end
+    authorize Proyect
   end
 
   private

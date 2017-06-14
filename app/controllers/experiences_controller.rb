@@ -12,6 +12,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences/1
   # GET /experiences/1.json
   def show
+      authorize Experience
   end
 
   # GET /experiences/new
@@ -21,6 +22,7 @@ class ExperiencesController < ApplicationController
 
   # GET /experiences/1/edit
   def edit
+      authorize Experience
   end
 
   # POST /experiences
