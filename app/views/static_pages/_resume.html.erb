@@ -18,7 +18,7 @@
 
       <% @experiences.each do |experience| %>
         <li class="note item_right">
-        <h4><%= experience.name %></h4>
+            <h4><%= experience.name %></h4><%= user_signed_in? ? (link_to "Editar", experience_path(experience)) : "" %>
         <h5><%= t :developer %></h5>
         <p class="desc">
         <%= raw experience.description %><br>
@@ -30,8 +30,8 @@
         <% end %>
         </p>
         <span class="date">
-          <%= l experience.start_date, format: :short %> - <%= l experience.end_date, format: :short %><br>
-          <%= distance_of_time_in_words(experience.start_date, experience.end_date) %> 
+            <%= l experience.start_date, format: :short %> - <%= l experience.end_date, format: :short %><br>
+            <%= experience.actual ? "actualmente" : distance_of_time_in_words(experience.start_date, experience.end_date) %> 
         </span>
         <span class="arrow fa fa-play"></span>
         </li>

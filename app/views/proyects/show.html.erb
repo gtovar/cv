@@ -29,12 +29,16 @@
           <h3><%= @proyect.name%></h3>
           <div class="line-strong"></div>
           <ul class="list-details">
-            <li><i class="fa fa-calendar"></i><strong><%= t :created_at %>:&nbsp; </strong>
-            <%= "#{l @proyect.start_time, format: :long} / #{distance_of_time_in_words(@proyect.start_time,@proyect.end_time)}" %>
-            </li>
-            <li><i class="fa fa-tag"></i><strong><%= t :position %>:&nbsp;</strong><%= @proyect.position %></li>
-          <li><i class="fa fa-globe"></i><%= link_to t('live_demo'), @proyect.link %></li>
-        </ul>
+              <li><i class="fa fa-calendar"></i><strong><%= t :created_at %>:&nbsp; </strong>
+                  <% if @proyect.actual %>
+                      <%= "#{l @proyect.start_time, format: :long} / actualmente" %>
+                  <% else %>
+                      <%= "#{l @proyect.start_time, format: :long} / #{distance_of_time_in_words(@proyect.start_time,@proyect.end_time)}" %>
+                  <% end %>
+              </li>
+              <li><i class="fa fa-tag"></i><strong><%= t :position %>:&nbsp;</strong><%= @proyect.position %></li>
+              <li><i class="fa fa-globe"></i><%= link_to t('live_demo'), @proyect.link %></li>
+          </ul>
         <p>
         <%= @proyect.description %>
         </p>
