@@ -19,7 +19,7 @@
       <% @experiences.each do |experience| %>
         <li class="note item_right">
             <h4><%= experience.name %></h4><%= user_signed_in? ? (link_to "Editar", experience_path(experience)) : "" %>
-        <h5><%= t :developer %></h5>
+        <h5><%= experience.position.blank? ? (t :developer) : experience.position %></h5>
         <p class="desc">
         <%= raw experience.description %><br>
         <h5><%= t :proyects unless experience.proyects.empty? %></h5>
