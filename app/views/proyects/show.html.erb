@@ -42,7 +42,7 @@
         <p>
         <%= @proyect.description %>
         </p>
-        <% if user_signed_in? %>
+        <% if policy(@proyect).update?  %>
             <p>
             <%= link_to 'Edit', edit_experience_proyect_path(@experience,@proyect), class: "btn btn-primary btn-lg active",  role: "button" %> |
             <%= link_to 'Back', experience_proyects_path(@experience), class: "btn btn-defaul btn-lg active",  role: "button"  %>
