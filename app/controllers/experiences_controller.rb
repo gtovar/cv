@@ -7,6 +7,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences.json
   def index
     @experiences = Experience.includes(:translations)
+    authorize Experience
   end
 
   # GET /experiences/1

@@ -1,29 +1,36 @@
 class ExperiencePolicy < ApplicationPolicy
+    attr_reader :user, :experience
+
+    def initialize(user,experience)
+        @user = user.nil? ? false : user.admin?
+        @experience = experience
+    end
+
     def create?
-        user.admin?
+        @user
     end
     
     def show?
-        user.admin?
+        @user
     end
 
     def new?
-        user.admin?
+        @user
     end
 
     def edit?
-        user.admin?
+        @user
     end
     
     def index?
-        user.admin?
+        @user
     end
     
     def update?
-        user.admin?
+        @user
     end
     
     def destroy?
-        user.admin?
+        @user
     end
 end
