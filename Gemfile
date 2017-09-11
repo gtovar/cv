@@ -86,4 +86,5 @@ gem "recaptcha", require: "recaptcha/rails"
 gem 'bundler'
 gem 'scout_apm'
 gem "pundit"
-
+gem 'rack-cors'
+gem 'font_assets'
