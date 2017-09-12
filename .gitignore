@@ -49,4 +49,5 @@ config/secrets.yml
 dump.rdb
 .powenv
 .DS_Store
-/.DS_Store
+*.DS_Store
+.DS_Store

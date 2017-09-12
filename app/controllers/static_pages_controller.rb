@@ -39,8 +39,22 @@ class StaticPagesController < ApplicationController
   end
   
   def home
+      fetch_proyects_experience
+      @experiences = Experience.includes(:proyects,:translations).order(start_date: :desc)
       params.permit(:"g-recaptcha-response")
       @url_resume = download_resume
+      expires_in 1.year, :public => true
+  end
+
+  def fetch_proyects_experience
+      proyects_experience =  $redis.get("proyects_experience")
+      if proyects_experience.nil?
+          proyects_experience = Proyect.proyects_experience.to_json
+          $redis.set("proyects_experience", proyects_experience)
+          # Expire the cache, every 5 hours
+          $redis.expire("proyects_experience",1.year.to_i)
+      end
+      @proyects = JSON.load proyects_experience
   end
 
 private

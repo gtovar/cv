@@ -19,6 +19,7 @@ class ProyectsController < ApplicationController
    # end
   end
 
+
   # GET /proyects/new
   def new
     @proyect = Proyect.new
@@ -27,7 +28,9 @@ class ProyectsController < ApplicationController
 
   # GET /proyects/1/edit
   def edit
-    authorize Proyect
+      @proyects = Proyect.includes(:experience,:translations)
+      @experiences = Experience.includes(:proyects,:translations).order(start_date: :desc)
+      authorize Proyect
   end
 
   # POST /proyects

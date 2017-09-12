@@ -10,4 +10,8 @@ class Proyect < ActiveRecord::Base
   def should_generate_new_friendly_id?
       name_changed?
   end
+
+  def self.proyects_experience
+      joins(:experience,:translations).select("proyects.id, proyects.experience_id, proyects.cover, proyects.slug AS proyect_slug, proyects.name, proyects.category, experiences.slug AS experience_slug" )
+  end
 end

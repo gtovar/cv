@@ -24,7 +24,7 @@ Gilbertotovar::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+  config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true
@@ -33,7 +33,7 @@ Gilbertotovar::Application.configure do
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.0'
+  config.assets.version = '1.9'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
@@ -80,4 +80,11 @@ Gilbertotovar::Application.configure do
   if ENV['CLOUDFRONT_ENDPOINT'].present?
       config.action_controller.asset_host = ENV["CLOUDFRONT_ENDPOINT"]
   end
+  config.public_file_server.headers = {
+      'Surrogate-Control' => 'max-age=315360000',
+      'Cache-Control' => 'public, max-age=604800',
+      'Expires' => 10.year.from_now.httpdate,
+      'Date' => 4.days.ago.httpdate,
+      'Last-Modified' => 10.days.ago.httpdate
+  }
 end

@@ -1,85 +1,78 @@
 <!-- Portfolio Section -->
 <section id="portfolio" class="section-content bg3">
-<div class="container">
-  <div class="row">
-    <!-- Section title -->
-    <div class="section-title item_bottom text-center">
-      <div>
-        <span class="fa fa-briefcase fa-2x"></span>
-      </div>
-      <h1 class="white"><span><%= t :proyects %></span></h1>
-    </div>
-    <!-- End Section title -->
-  </div>
-  <div class="portfolio-top">
-  </div>
-  <div id="portfolio-wrap" tabindex="1">
-    <div id="portfolio-page">
-      <div id="portfolio-content">
-        <div class="container">
-          <div class="row">
-            <div id="protfolio-control">
-              <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-4">
-                  <a href="#" id="prev-project" title="Previous Project"><i class="fa fa-arrow-left"></i></a>
+    <div class="container">
+        <div class="row">
+            <!-- Section title -->
+            <div class="section-title item_bottom text-center">
+                <div>
+                    <span class="fa fa-briefcase fa-2x"></span>
                 </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-                  <a href="#" id="close-project" title="Close Project"><i class="fa fa-times"></i></a>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-4 text-right">
-                  <a href="#" id="next-project" title="Next Project"><i class="fa fa-arrow-right"></i></a>
-                </div>
-              </div>
+                <h1 class="white"><span><%= t :proyects %></span></h1>
             </div>
-            <!-- End #protfolio-control -->
-            <!-- Ajax will load into here -->
-            <div id="portfolio-ajax">
-            </div>
-            <!-- End #portfolio-ajax -->
-            <!-- End Ajax -->
-          </div>
-        </div>  
-      </div>
-      <!-- End #portfolio-content -->
-    </div>
-    <!-- End #portfolio-page -->
-  </div>
-  <!-- End #portfolio-wrap -->
-</div>
-<!-- End .container -->
-
-<!-- End #portfolio-filter -->
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div id="portfolio-items" class="portfolio-items item_fade_in">
-
-
-          <% if @proyects.each do |proyect| %>
-
-            <article class="design photo">
-            <%= link_to [proyect.experience,proyect] do %>
-              <%= image_tag(proyect.cover_url(:thumb), :alt => "image") if proyect.cover_url.present?  %>
-              <div class="overlay">
-                <div class="item-info">
-                  <i class="fa fa-camera"></i>
-                  <h3><%= proyect.name %></h3>
-                  <span><%= proyect.category %></span>
+            <!-- End Section title -->
+        </div>
+        <div class="portfolio-top">
+        </div>
+        <div id="portfolio-wrap" tabindex="1">
+            <div id="portfolio-page">
+                <div id="portfolio-content">
+                    <div class="container">
+                        <div class="row">
+                            <div id="protfolio-control">
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <a href="#" id="prev-project" title="Previous Project"><i class="fa fa-arrow-left"></i></a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                                        <a href="#" id="close-project" title="Close Project"><i class="fa fa-times"></i></a>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 text-right">
+                                        <a href="#" id="next-project" title="Next Project"><i class="fa fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End #protfolio-control -->
+                            <!-- Ajax will load into here -->
+                            <div id="portfolio-ajax">
+                            </div>
+                            <!-- End #portfolio-ajax -->
+                            <!-- End Ajax -->
+                        </div>
+                    </div>  
                 </div>
-              </div>
-              <!-- End .overlay -->
-            <% end %>
-            </article>
-
-
-          <% end.empty? %>
-          <h1> No portafolio </h1> 
-        <% end %>
-
-      </div>
-      <!-- End #portfolio-items.portfolio-items -->
-    </div> 
-  </div>
-</div>
+                <!-- End #portfolio-content -->
+            </div>
+            <!-- End #portfolio-page -->
+        </div>
+        <!-- End #portfolio-wrap -->
+    </div>
+    <!-- End .container -->
+    <!-- End #portfolio-filter -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="portfolio-items" class="portfolio-items item_fade_in">
+                    <% if @proyects.each do |proyect| %>
+                        <article class="design photo">
+                            <%= link_to experience_proyect_url(proyect["experience_slug"], proyect['proyect_slug']), {locales: 'es'} do %>
+                                <%= image_tag(proyect['cover']['thumb']['url'], :alt => "image") %>
+                                <div class="overlay">
+                                    <div class="item-info">
+                                        <i class="fa fa-camera"></i>
+                                        <h3><%= proyect['name'] %></h3>
+                                        <span><%= proyect['category'] %></span>
+                                    </div>
+                                </div>
+                                <!-- End .overlay -->
+                            <% end %>
+                        </article>
+                        <% end.empty? %>
+                        <h1> No portafolio </h1> 
+                    <% end %>
+                </div>
+                <!-- End #portfolio-items.portfolio-items -->
+            </div> 
+        </div>
+    </div>
 </section>
 <!-- End Portfolio Section -->

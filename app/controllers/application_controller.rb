@@ -20,8 +20,8 @@ class ApplicationController < ActionController::Base
     private
 
     def load_dashboard
-        @proyects = Proyect.includes(:experience,:translations)
-        @experiences = Experience.includes(:proyects,:translations).order(start_date: :desc)
+      @proyects = Proyect.includes(:experience,:translations)
+      @experiences = Experience.includes(:proyects,:translations).order(start_date: :desc)
     end
 
     def user_not_authorized(exception)

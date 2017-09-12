@@ -17,32 +17,32 @@ ActiveRecord::Schema.define(version: 20170614031923) do
 
   create_table "experience_translations", id: :serial, force: :cascade do |t|
     t.integer "experience_id", null: false
-    t.string "locale", limit: 255, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.text "description"
     t.index ["experience_id"], name: "index_experience_translations_on_experience_id"
     t.index ["locale"], name: "index_experience_translations_on_locale"
   end
 
   create_table "experiences", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string "name"
     t.text "description"
     t.date "start_date"
     t.date "end_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "slug", limit: 255
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "slug"
     t.string "position"
     t.boolean "actual"
     t.index ["slug"], name: "index_experiences_on_slug", unique: true
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
-    t.string "slug", limit: 255, null: false
+    t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
-    t.string "scope", limit: 255
+    t.string "scope"
     t.datetime "created_at"
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
@@ -52,54 +52,54 @@ ActiveRecord::Schema.define(version: 20170614031923) do
 
   create_table "proyect_translations", id: :serial, force: :cascade do |t|
     t.integer "proyect_id", null: false
-    t.string "locale", limit: 255, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "position", limit: 255
+    t.string "locale", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "position"
     t.text "activities"
     t.text "outstaning"
     t.text "description"
     t.text "activity_description"
-    t.string "category", limit: 255
+    t.string "category"
     t.index ["locale"], name: "index_proyect_translations_on_locale"
     t.index ["proyect_id"], name: "index_proyect_translations_on_proyect_id"
   end
 
   create_table "proyects", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255
+    t.string "name"
     t.date "start_time"
     t.date "end_time"
-    t.string "position", limit: 255
+    t.string "position"
     t.text "activities"
     t.text "outstaning"
     t.text "tools"
     t.text "description"
-    t.string "cover", limit: 255
+    t.string "cover"
     t.text "activity_description"
-    t.string "category", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "link", limit: 255
-    t.string "logo", limit: 255
-    t.string "slug", limit: 255
+    t.string "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "link"
+    t.string "logo"
+    t.string "slug"
     t.integer "experience_id"
     t.boolean "actual", default: false
     t.index ["slug"], name: "index_proyects_on_slug", unique: true
   end
 
   create_table "users", id: :serial, force: :cascade do |t|
-    t.string "email", limit: 255, default: "", null: false
-    t.string "encrypted_password", limit: 255, default: "", null: false
-    t.string "reset_password_token", limit: 255
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip", limit: 255
-    t.string "last_sign_in_ip", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.boolean "admin", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

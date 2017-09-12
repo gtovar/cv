@@ -1,9 +1,3 @@
-Rails.application.config.assets.version = '1.7'
 Rails.application.config.assets.precompile += %w( docs.js dashboard.css bootstrap3.css bootstrap3.js gmap-settings.js script.js)
 Rails.application.config.assets.precompile += %w(templates/* )
-Rails.application.config.assets.precompile += %w( *.png *.jpg *.jpeg *.gif svg *.eot *.woff *.woff2 *.ttf templates/identity/fonts/* font-awesome.min.css )
-Rails.application.config.assets.precompile += %w(vendor/* )
-Rails.application.config.assets.precompile += %w(assets/* )
-Rails.application.config.assets.precompile += %w(fonts/* )
-Rails.application.config.assets.precompile += %w(assets/templates/* )
-Rails.application.config.font_assets.origin = '*'
+Rails.application.config.assets.precompile += %w( *.png *.jpg *.jpeg *.gif svg *.eot *.woff *.woff2 *.ttf templates/identity/fonts/* font-awesome.min.css google_analytics.js )
