@@ -65,7 +65,7 @@ private
           credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'],ENV['AWS_SECRET_ACCESS_KEY'])
       })
       s3 = Aws::S3::Resource.new
-      object = s3.bucket('gilbertotovar').object('cvonline/cv.docx').presigned_url(:get, expires_in: 3600, response_content_disposition: 'attachment')
+      object = s3.bucket('gilbertotovar').object('cvonline/cv.pdf').presigned_url(:get, expires_in: 3600, response_content_disposition: 'attachment')
   end
 
 
