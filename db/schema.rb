@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170614031923) do
+ActiveRecord::Schema.define(version: 20170918031752) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "experience_translations", id: :serial, force: :cascade do |t|
+  create_table "experience_translations", force: :cascade do |t|
     t.integer "experience_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20170614031923) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "proyect_translations", id: :serial, force: :cascade do |t|
+  create_table "proyect_translations", force: :cascade do |t|
     t.integer "proyect_id", null: false
     t.string "locale", null: false
     t.datetime "created_at", null: false
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20170614031923) do
     t.text "description"
     t.text "activity_description"
     t.string "category"
+    t.text "tools"
     t.index ["locale"], name: "index_proyect_translations_on_locale"
     t.index ["proyect_id"], name: "index_proyect_translations_on_proyect_id"
   end
