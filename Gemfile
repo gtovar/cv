@@ -83,7 +83,7 @@ gem 'twilio-ruby'
 gem 'aws-sdk', '~> 2'
 gem 'newrelic_rpm'
 gem "recaptcha", require: "recaptcha/rails"
-gem 'bundler'
+gem 'bundler', '1.15'
 gem 'scout_apm'
 gem "pundit"
 gem 'rack-cors'
