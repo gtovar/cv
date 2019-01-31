@@ -1,0 +1,8 @@
+es:
+  experiences:
+    new:
+      experience: Nueva empresa
+    edit:
+      experience: Editar empresa
+    index:
+      experience: Lista de empresas

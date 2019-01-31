@@ -293,6 +293,8 @@ es:
   try_again_later: Intente nuevamente.
   email_sent_successfully: Correo enviado exitosamente!!!
   your_message_has_been_submitted: Tu mensaje a sido enviado.
+  show: Mostrar
+  back: Regresar
   pundit:
       default: No puedes realizar esta acción.
       proyect_policy:

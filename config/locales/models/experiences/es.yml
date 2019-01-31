@@ -1,0 +1,11 @@
+es:
+  activerecord:
+    models:
+      experience: Empresa
+    attributes:
+      experience:
+        name: Nombre de la empresa
+        start_date: Fecha de contratación
+        end_date: Fecha de renuncia 
+        position: Puesto
+        description: Descripción

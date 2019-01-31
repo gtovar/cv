@@ -1,16 +1,16 @@
 <%= title(t :listing_experiences) %>
-<h1>Listing experiences
-  <%= link_to 'New Experience', new_experience_path, class: "btn btn-info", role:"button" %>
+<h1><%= t '.experience' %>
+  <%= link_to t(:new_experience), new_experience_path, class: "btn btn-info", role:"button" %>
 </h1>
 
 <div class="table-responsive">
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Start date</th>
-      <th>End date</th>
+      <th><%= Experience.human_attribute_name("name") %></th>
+      <th><%= Experience.human_attribute_name("description") %></th>
+      <th><%= Experience.human_attribute_name("start_date") %></th>
+      <th><%= Experience.human_attribute_name("end_date") %></th>
       <th></th>
       <th></th>
       <th></th>
@@ -38,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Experience', new_experience_path, class: "btn btn-info", role:"button" %>
+<%= link_to t(:new_experience), new_experience_path, class: "btn btn-info", role:"button" %>

@@ -1,6 +1,6 @@
 <%= title(t :new_experience) %>
-<h1>New experience</h1>
+<h1><%= t '.experience' %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', experiences_path %>
+<%= link_to t('back'), experiences_path %>
