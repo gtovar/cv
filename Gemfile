@@ -92,4 +92,4 @@ gem 'heroku-deflater', :group => :production
 gem 'derailed', group: :development
 gem 'redis-rails'
 gem "bugsnag"
-
+gem 'sprockets'

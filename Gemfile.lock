@@ -81,7 +81,7 @@ GEM
       ffi (~> 1.0, >= 1.0.11)
     cliver (0.3.2)
     coderay (1.1.2)
-    concurrent-ruby (1.0.5)
+    concurrent-ruby (1.1.4)
     database_cleaner (1.6.1)
     derailed (0.1.0)
       derailed_benchmarks
@@ -351,7 +351,7 @@ GEM
       puma (>= 2.7, < 4)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
-    rack (2.0.3)
+    rack (2.0.6)
     rack-cors (1.0.1)
     rack-test (0.7.0)
       rack (>= 1.0, < 3)
@@ -457,7 +457,7 @@ GEM
       websocket (~> 1.0.4)
     shellany (0.0.1)
     slop (3.6.0)
-    sprockets (3.7.1)
+    sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (3.2.1)
@@ -535,6 +535,7 @@ DEPENDENCIES
   scout_apm
   sdoc
   selenium-webdriver (~> 2.39.0)
+  sprockets
   turbolinks
   twilio-ruby
   uglifier (>= 1.3.0)
