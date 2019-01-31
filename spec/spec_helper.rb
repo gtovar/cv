@@ -24,7 +24,7 @@ require 'capybara/poltergeist'
 Dir[Rails.root.join("spec/helpers/**/*.rb")].each { |f| require f }
 RSpec.configure do |config|
   config.include LoginMacros
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   Capybara.register_driver :poltergeist do |app|
     Capybara::Poltergeist::Driver.new(app, inspector: true, js_errors: false)
   end

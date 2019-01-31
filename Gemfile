@@ -62,7 +62,7 @@ group :test, :development do
   gem "rspec-rails"
   gem "pry-rails"
   gem "xray-rails"
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem "guard-rspec"
 end
 
