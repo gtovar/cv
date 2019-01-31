@@ -19,6 +19,7 @@ class ExperiencesController < ApplicationController
   # GET /experiences/new
   def new
     @experience = Experience.new
+    authorize Experience
   end
 
   # GET /experiences/1/edit
@@ -40,6 +41,7 @@ class ExperiencesController < ApplicationController
         format.json { render json: @experience.errors, status: :unprocessable_entity }
       end
     end
+    authorize Experience
   end
 
   # PATCH/PUT /experiences/1
@@ -64,6 +66,7 @@ class ExperiencesController < ApplicationController
       format.html { redirect_to experiences_url }
       format.json { head :no_content }
     end
+    authorize Experience
   end
 
   private
